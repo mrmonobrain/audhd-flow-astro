@@ -43,7 +43,7 @@ const { data } = Astro.props;
 
       <div class="flex flex-col gap-6">
         {data.stats.map((stat, i) => (
-          <div class={`reveal reveal-delay-${i + 1} relative bg-surface2 border border-border rounded-lg p-7 overflow-hidden hover:border-teal-border transition-colors`}>
+          <div class:list={['reveal relative bg-surface2 border border-border rounded-lg p-7 overflow-hidden hover:border-teal-border transition-colors', i === 0 && 'reveal-delay-1', i === 1 && 'reveal-delay-2', i === 2 && 'reveal-delay-3']}>
             <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-primary to-transparent"></div>
             <div class="font-display text-[2.5rem] font-extrabold text-primary-light leading-none mb-2">
               {stat.number}

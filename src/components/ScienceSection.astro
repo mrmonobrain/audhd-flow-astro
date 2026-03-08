@@ -44,7 +44,7 @@ const p = data.paradox;
 
         <div class="flex flex-col gap-8">
           {data.principles.map((principle, i) => (
-            <div class={`reveal reveal-delay-${i + 1} grid grid-cols-[auto_1fr] gap-6 items-start`}>
+            <div class:list={['reveal grid grid-cols-[auto_1fr] gap-6 items-start', i === 0 && 'reveal-delay-1', i === 1 && 'reveal-delay-2', i === 2 && 'reveal-delay-3']}>
               <span class="font-mono text-[0.625rem] tracking-[0.2em] text-primary pt-1 whitespace-nowrap">
                 {principle.num}
               </span>
@@ -60,13 +60,13 @@ const p = data.paradox;
           ))}
         </div>
 
-        <a
-          href="#"
-          class="reveal reveal-delay-4 mt-8 inline-flex items-center gap-2 font-mono text-xs tracking-[0.1em] uppercase text-text2 hover:text-primary-light transition-colors no-underline"
+        <span
+          class="reveal reveal-delay-4 mt-8 inline-flex items-center gap-2 font-mono text-xs tracking-[0.1em] uppercase text-text3 cursor-default"
+          title="Kommt bald"
         >
           {data.readMoreLink}
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </span>
       </div>
 
       <!-- Right: Paradox card -->

@@ -51,12 +51,16 @@ const altPath = Astro.url.pathname.replace(`/${lang}`, `/${altLang}`);
     <div class="flex items-center gap-1.5 bg-surface2 border border-border rounded-md p-1">
       <a
         href={lang === 'de' ? Astro.url.pathname : altPath}
+        aria-label="Deutsch"
+        aria-current={lang === 'de' ? 'page' : undefined}
         class={`px-2 py-1 font-mono text-[0.6875rem] tracking-[0.1em] rounded-sm transition-all no-underline ${lang === 'de' ? 'bg-primary text-primary-foreground' : 'bg-transparent text-text3'}`}
       >
         DE
       </a>
       <a
         href={lang === 'en' ? Astro.url.pathname : altPath}
+        aria-label="English"
+        aria-current={lang === 'en' ? 'page' : undefined}
         class={`px-2 py-1 font-mono text-[0.6875rem] tracking-[0.1em] rounded-sm transition-all no-underline ${lang === 'en' ? 'bg-primary text-primary-foreground' : 'bg-transparent text-text3'}`}
       >
         EN
@@ -70,11 +74,11 @@ const altPath = Astro.url.pathname.replace(`/${lang}`, `/${altLang}`);
       class="flex items-center justify-center w-[34px] h-[34px] bg-surface2 border border-border rounded-md cursor-pointer text-text2 hover:border-teal-border hover:text-primary transition-all"
     >
       <!-- Sun icon (shown in dark mode) -->
-      <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden dark:block">
+      <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden dark:block" aria-hidden="true">
         <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
       </svg>
       <!-- Moon icon (shown in light mode) -->
-      <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="block dark:hidden">
+      <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="block dark:hidden" aria-hidden="true">
         <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
       </svg>
     </button>

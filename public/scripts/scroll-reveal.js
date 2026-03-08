@@ -1,17 +1,21 @@
 // Scroll reveal – IntersectionObserver adds .visible to .reveal elements
-(function () {
+document.addEventListener('DOMContentLoaded', function () {
+  var elements = document.querySelectorAll('.reveal');
+  if (!elements.length) return;
+
   var observer = new IntersectionObserver(
     function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    { threshold: 0.05, rootMargin: '0px 0px -20px 0px' }
   );
 
-  document.querySelectorAll('.reveal').forEach(function (el) {
+  elements.forEach(function (el) {
     observer.observe(el);
   });
-})();
+});
