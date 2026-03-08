@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
-  site: 'https://audhd-flow.ch',
+  site: 'https://audhd-flow.netlify.app',
   output: 'static',
   integrations: [
     tailwind({
