@@ -1,0 +1,221 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import '../../styles/global.css';
+
+import globalData from '../../content/settings/global.json';
+
+const lang = 'de';
+---
+
+<BaseLayout
+  title="Datenschutzerklärung – AuDHD-Flow"
+  description="Datenschutzerklärung der Markenkern AG für AuDHD-Flow. DSG-konform, Schweiz."
+  lang={lang}
+>
+  <Navbar lang={lang} global={globalData} />
+  <main class="pt-32 pb-20 px-8">
+    <div class="max-w-[680px] mx-auto">
+      <h1 class="font-display text-3xl font-bold tracking-tight text-foreground mb-4">
+        Datenschutzerklärung
+      </h1>
+      <p class="font-mono text-xs text-muted-foreground tracking-wider uppercase mb-10">
+        Stand: Februar 2026
+      </p>
+
+      <div class="space-y-10 font-body text-sm leading-relaxed text-muted-foreground">
+
+        <section>
+          <h2 class="font-display text-lg font-semibold text-foreground mb-2">1. Allgemeines</h2>
+          <p>Gestützt auf Artikel 13 der schweizerischen Bundesverfassung sowie die Bestimmungen des revidierten Bundesgesetzes über den Datenschutz (DSG, in Kraft seit 1. September 2023) hat jede Person Anspruch auf Schutz ihrer Privatsphäre und ihrer persönlichen Daten.</p>
+          <p class="mt-3">Die Markenkern AG nimmt den Schutz Ihrer Daten ernst. Wir verarbeiten Personendaten vertraulich und ausschliesslich nach Massgabe dieser Erklärung und der anwendbaren Gesetze.</p>
+          <p class="mt-3">Diese Datenschutzerklärung gilt für:</p>
+          <ul class="list-disc pl-5 mt-2 space-y-1">
+            <li>die Website audhd-flow.ch</li>
+            <li>die iOS-App «AuDHD-Flow» (Apple App Store)</li>
+            <li>die Android-Warteliste (E-Mail-Formular)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-display text-lg font-semibold text-foreground mb-2">2. Verantwortliche Stelle</h2>
+          <p><strong class="text-foreground">Markenkern AG</strong><br />Fabio Aresu<br />Bahnhofstrasse 7, CH-7000 Chur<br />UID: CHE-113.666.692</p>
+          <p class="mt-3">Verantwortlich für AuDHD-Flow:<br />Fabio Aresu – <a href="mailto:privacy@audhd-flow.ch" class="text-primary hover:text-primary-light transition-colors underline underline-offset-2">privacy@audhd-flow.ch</a></p>
+        </section>
+
+        <section>
+          <h2 class="font-display text-lg font-semibold text-foreground mb-2">3. Datenschutzbeauftragte Person</h2>
+          <p>Fabio Aresu<br />Markenkern AG, Bahnhofstrasse 7, CH-7000 Chur<br />E-Mail: <a href="mailto:privacy@audhd-flow.ch" class="text-primary hover:text-primary-light transition-colors underline underline-offset-2">privacy@audhd-flow.ch</a></p>
+          <p class="mt-3">Bei Fragen zum Datenschutz wenden Sie sich direkt an diese Person.</p>
+        </section>
+
+        <section>
+          <h2 class="font-display text-lg font-semibold text-foreground mb-2">4. Rechtsgrundlagen der Datenbearbeitung</h2>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong class="text-foreground">Einwilligung</strong> (Art. 6 Abs. 6 DSG): z.B. Cookie-Consent, Waitlist-Anmeldung</li>
+            <li><strong class="text-foreground">Vertragserfüllung</strong>: z.B. App-Nutzung, Kundenservice</li>
+            <li><strong class="text-foreground">Berechtigte Interessen</strong> (Art. 31 DSG): z.B. Website-Betrieb, Sicherheit, Statistik</li>
+            <li><strong class="text-foreground">Gesetzliche Pflichten</strong>: z.B. Buchführung, Aufbewahrungsfristen</li>
+          </ul>
+          <p class="mt-3">Soweit und sofern die EU-DSGVO anwendbar ist, stützen wir uns ergänzend auf Art. 6 Abs. 1 DSGVO.</p>
+        </section>
+
+        <section>
+          <h2 class="font-display text-lg font-semibold text-foreground mb-2">5. Welche Daten wir bearbeiten</h2>
+
+          <h3 class="font-display text-base font-medium text-foreground mt-4 mb-2">5.1 Website-Besuch (Server-Log-Files)</h3>
+          <p>Beim Besuch von audhd-flow.ch erheben wir automatisch:</p>
+          <ul class="list-disc pl-5 mt-2 space-y-1">
+            <li>IP-Adresse (anonymisiert)</li>
+            <li>Browsertyp und -version</li>
+            <li>Betriebssystem</li>
+            <li>Referrer-URL</li>
+            <li>Datum und Uhrzeit der Anfrage</li>
+            <li>Aufgerufene Seite</li>
+          </ul>
+          <p class="mt-3">Diese Daten sind nicht direkt einer Person zuordenbar. Sie dienen der technischen Sicherheit und werden nach 30 Tagen gelöscht.</p>
+          <p class="mt-2"><strong class="text-foreground">Hosting:</strong> Die Website wird auf Servern der Netlify Inc. betrieben.</p>
+
+          <h3 class="font-display text-base font-medium text-foreground mt-6 mb-2">5.2 Android-Warteliste</h3>
+          <p>Wenn Sie sich für die Android-Version vormerken lassen, erheben wir:</p>
+          <ul class="list-disc pl-5 mt-2 space-y-1">
+            <li>E-Mail-Adresse</li>
+            <li>Zeitstempel der Anmeldung</li>
+            <li>Plattformpräferenz</li>
+          </ul>
+          <p class="mt-3"><strong class="text-foreground">Zweck:</strong> Benachrichtigung bei Verfügbarkeit der Android-App.</p>
+          <p class="mt-1"><strong class="text-foreground">Speicherung:</strong> Via Netlify Forms.</p>
+          <p class="mt-1"><strong class="text-foreground">Löschung:</strong> Nach Versand der Benachrichtigung oder auf Anfrage jederzeit.</p>
+          <p class="mt-3">Wir geben diese Daten nicht an Dritte weiter. Sie können die Einwilligung jederzeit widerrufen: <a href="mailto:privacy@audhd-flow.ch" class="text-primary hover:text-primary-light transition-colors underline underline-offset-2">privacy@audhd-flow.ch</a></p>
+
+          <h3 class="font-display text-base font-medium text-foreground mt-6 mb-2">5.3 Die iOS-App (AuDHD-Flow)</h3>
+          <p>Die App selbst erhebt keine Personendaten. Sie funktioniert vollständig offline. Es werden keine Nutzungsdaten, Standortdaten, Audiodaten oder Verhaltensprofile erfasst oder übermittelt.</p>
+          <p class="mt-3">Einzige Ausnahme: Technische Absturzberichte, die Apple optional über die iOS-Systemeinstellungen an Entwickler weiterleitet (Apple Crashlytics). Dazu verweisen wir auf die Datenschutzerklärung von Apple: <a href="https://www.apple.com/legal/privacy/de-ww/" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-light transition-colors underline underline-offset-2">apple.com/legal/privacy</a></p>
+          <p class="mt-3 p-3 rounded-md bg-accent/50 border border-border font-mono text-xs tracking-wider uppercase text-foreground">Kein Tracking. Kein Abo-Konto. Keine Cloud-Synchronisation.</p>
+        </section>
+
+        <section>
+          <h2 class="font-display text-lg font-semibold text-foreground mb-2">6. Cookies und Cookie-Consent</h2>
+
+          <h3 class="font-display text-base font-medium text-foreground mt-4 mb-2">Technisch notwendige Cookies</h3>
+          <p>Wir setzen ein technisch notwendiges Cookie für die Speicherung Ihrer Theme-Wahl (Hell/Dunkel-Modus) und Sprachauswahl. Dieses Cookie enthält keine Personendaten, ist auf Ihrem Gerät gespeichert und erfordert keine Einwilligung.</p>
+
+          <h3 class="font-display text-base font-medium text-foreground mt-4 mb-2">Analyse-Cookies (Google Analytics 4)</h3>
+          <p><strong class="text-foreground">Nur mit Ihrer ausdrücklichen Einwilligung</strong> setzen wir Google Analytics 4 (GA4) ein, einen Webanalysedienst der Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA.</p>
+          <p class="mt-3">GA4 verwendet Cookies und erhebt dabei:</p>
+          <ul class="list-disc pl-5 mt-2 space-y-1">
+            <li>Anonymisierte IP-Adresse (IP-Anonymisierung aktiviert)</li>
+            <li>Seitenaufrufe und Navigationspfade</li>
+            <li>Verweildauer</li>
+            <li>Gerätekategorie, Betriebssystem, Sprache</li>
+            <li>Herkunftskanal (direkt, organisch, etc.)</li>
+          </ul>
+          <p class="mt-3"><strong class="text-foreground">Zweck:</strong> Verbesserung des Angebots, Verständnis der Nutzung.</p>
+          <p class="mt-1"><strong class="text-foreground">Rechtsgrundlage:</strong> Ihre Einwilligung (Cookie-Banner).</p>
+          <p class="mt-1"><strong class="text-foreground">Widerruf:</strong> Jederzeit über den Cookie-Banner oder per E-Mail an <a href="mailto:privacy@audhd-flow.ch" class="text-primary hover:text-primary-light transition-colors underline underline-offset-2">privacy@audhd-flow.ch</a></p>
+
+          <h3 class="font-display text-base font-medium text-foreground mt-4 mb-2">Datenübermittlung in die USA</h3>
+          <p>Google LLC ist in den USA ansässig. Bei aktiviertem GA4 werden Daten in die USA übermittelt. Google ist gemäss dem EU-US Data Privacy Framework (DPF) zertifiziert.</p>
+          <p class="mt-3">Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-light transition-colors underline underline-offset-2">policies.google.com/privacy</a></p>
+          <p class="mt-3 p-3 rounded-md bg-accent/50 border border-border"><strong class="text-foreground">Hinweis:</strong> Trotz dieser Massnahmen können US-Behörden unter Umständen auf in den USA gespeicherte Daten zugreifen. Sie können die Einwilligung jederzeit widerrufen – GA4 wird dann deaktiviert.</p>
+
+          <h3 class="font-display text-base font-medium text-foreground mt-4 mb-2">GA4 vollständig deaktivieren</h3>
+          <p>Über das Browser-Plugin von Google: <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-light transition-colors underline underline-offset-2">tools.google.com/dlpage/gaoptout</a></p>
+        </section>
+
+        <section>
+          <h2 class="font-display text-lg font-semibold text-foreground mb-2">7. SSL/TLS-Verschlüsselung</h2>
+          <p>audhd-flow.ch verwendet durchgehend HTTPS mit TLS-Verschlüsselung. Das Schloss-Symbol in der Adresszeile bestätigt die verschlüsselte Verbindung. Daten, die Sie uns übermitteln, können von Dritten nicht mitgelesen werden.</p>
+        </section>
+
+        <section>
+          <h2 class="font-display text-lg font-semibold text-foreground mb-2">8. Datenübermittlungen an Dritte</h2>
+          <p class="mb-3">Wir geben Ihre Daten grundsätzlich nicht weiter. Ausnahmen:</p>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm border border-border rounded-md">
+              <thead>
+                <tr class="bg-accent/50">
+                  <th class="text-left p-2 border-b border-border text-foreground font-medium">Empfänger</th>
+                  <th class="text-left p-2 border-b border-border text-foreground font-medium">Zweck</th>
+                  <th class="text-left p-2 border-b border-border text-foreground font-medium">Standort</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="p-2 border-b border-border">Google LLC (GA4)</td>
+                  <td class="p-2 border-b border-border">Webanalyse (nur mit Consent)</td>
+                  <td class="p-2 border-b border-border">USA (DPF-zertifiziert)</td>
+                </tr>
+                <tr>
+                  <td class="p-2 border-b border-border">Apple Inc.</td>
+                  <td class="p-2 border-b border-border">App Store Distribution</td>
+                  <td class="p-2 border-b border-border">USA (DPF-zertifiziert)</td>
+                </tr>
+                <tr>
+                  <td class="p-2">Netlify Inc.</td>
+                  <td class="p-2">Webhosting & Forms</td>
+                  <td class="p-2">USA (SCCs)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="font-display text-lg font-semibold text-foreground mb-2">9. Aufbewahrungsfristen</h2>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm border border-border rounded-md">
+              <thead>
+                <tr class="bg-accent/50">
+                  <th class="text-left p-2 border-b border-border text-foreground font-medium">Datenart</th>
+                  <th class="text-left p-2 border-b border-border text-foreground font-medium">Aufbewahrungsdauer</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="p-2 border-b border-border">Server-Log-Files</td><td class="p-2 border-b border-border">30 Tage</td></tr>
+                <tr><td class="p-2 border-b border-border">Waitlist-E-Mails</td><td class="p-2 border-b border-border">Bis zur Benachrichtigung oder Widerruf</td></tr>
+                <tr><td class="p-2 border-b border-border">GA4-Daten</td><td class="p-2 border-b border-border">14 Monate (GA4-Standardeinstellung, gekürzt)</td></tr>
+                <tr><td class="p-2">Geschäftliche Korrespondenz</td><td class="p-2">10 Jahre (gesetzliche Pflicht, OR)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="font-display text-lg font-semibold text-foreground mb-2">10. Ihre Rechte nach DSG</h2>
+          <p class="mb-3">Sie haben folgende Rechte gegenüber der Markenkern AG:</p>
+          <ul class="space-y-3">
+            <li><strong class="text-foreground">Auskunft (Art. 25 DSG):</strong> Sie können jederzeit kostenlos Auskunft über Ihre bei uns gespeicherten Daten verlangen.</li>
+            <li><strong class="text-foreground">Berichtigung (Art. 32 DSG):</strong> Unrichtige Daten lassen wir auf Anfrage korrigieren.</li>
+            <li><strong class="text-foreground">Löschung (Art. 32 DSG):</strong> Sie können die Löschung Ihrer Daten verlangen, soweit keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</li>
+            <li><strong class="text-foreground">Einschränkung der Bearbeitung:</strong> Sie können verlangen, dass wir die Bearbeitung Ihrer Daten einschränken.</li>
+            <li><strong class="text-foreground">Datenportabilität:</strong> Soweit technisch möglich, erhalten Sie Ihre Daten in einem maschinenlesbaren Format.</li>
+            <li><strong class="text-foreground">Widerruf der Einwilligung:</strong> Jede erteilte Einwilligung kann jederzeit mit Wirkung für die Zukunft widerrufen werden.</li>
+            <li><strong class="text-foreground">Beschwerde:</strong> Sie haben das Recht, beim EDÖB Beschwerde einzureichen: <a href="https://www.edoeb.admin.ch" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-light transition-colors underline underline-offset-2">edoeb.admin.ch</a></li>
+          </ul>
+          <p class="mt-4">Für alle Anliegen: <a href="mailto:privacy@audhd-flow.ch" class="text-primary hover:text-primary-light transition-colors underline underline-offset-2">privacy@audhd-flow.ch</a></p>
+          <p class="mt-1">Wir bearbeiten Ihre Anfrage innert 30 Tagen.</p>
+        </section>
+
+        <section>
+          <h2 class="font-display text-lg font-semibold text-foreground mb-2">11. Widerspruch gegen Werbe-E-Mails</h2>
+          <p>Der Nutzung von im Impressum veröffentlichten Kontaktdaten zur Übersendung nicht ausdrücklich angeforderter Werbung wird hiermit ausdrücklich widersprochen. Wir behalten uns rechtliche Schritte gegen unverlangte Zusendungen (Spam) vor.</p>
+        </section>
+
+        <section>
+          <h2 class="font-display text-lg font-semibold text-foreground mb-2">12. Änderungen dieser Erklärung</h2>
+          <p>Wir passen diese Datenschutzerklärung bei Bedarf an, insbesondere bei Änderungen der genutzten Dienste oder der gesetzlichen Anforderungen. Die jeweils aktuelle Fassung gilt.</p>
+        </section>
+
+        <footer class="pt-6 border-t border-border">
+          <p class="font-mono text-xs tracking-wider uppercase text-muted-foreground">
+            Chur, Februar 2026<br />
+            Markenkern AG – AuDHD-Flow
+          </p>
+        </footer>
+      </div>
+    </div>
+  </main>
+  <Footer lang={lang} global={globalData} />
+</BaseLayout>

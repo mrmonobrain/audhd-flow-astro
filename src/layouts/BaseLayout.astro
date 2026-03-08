@@ -1,0 +1,90 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  lang: 'de' | 'en';
+  canonical?: string;
+  ogImage?: string;
+}
+
+const {
+  title,
+  description,
+  lang,
+  canonical,
+  ogImage = 'https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0ec5e839-bd3d-4790-8a9f-f7e645295e8d/id-preview-6b64c05b--6da6ab36-1db0-4cd9-ac37-f668cfbf8097.lovable.app-1771354989116.png',
+} = Astro.props;
+
+const canonicalURL = canonical ?? Astro.url.href;
+const alternateHref = lang === 'de'
+  ? canonicalURL.replace('/de/', '/en/')
+  : canonicalURL.replace('/en/', '/de/');
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Markenkern AG" />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="alternate" hreflang={lang === 'de' ? 'en' : 'de'} href={alternateHref} />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:locale" content={lang === 'de' ? 'de_CH' : 'en_US'} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "AuDHD-Flow",
+      "url": "https://audhd-flow.ch",
+      "description": description,
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "iOS, Android",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Markenkern AG",
+        "url": "https://audhd-flow.ch"
+      }
+    })} />
+
+    <!-- Inline theme init (must run before paint to avoid flash) -->
+    <script is:inline>
+      (function() {
+        var saved = localStorage.getItem('audhd-theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <slot />
+    <script src="/scripts/theme.js" defer></script>
+    <script src="/scripts/scroll-reveal.js" defer></script>
+    <script src="/scripts/cookie-banner.js" defer></script>
+  </body>
+</html>

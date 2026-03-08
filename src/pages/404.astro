@@ -1,0 +1,40 @@
+---
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 – AuDHD-Flow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link rel="icon" href="/favicon.ico" />
+    <script is:inline>
+      (function() {
+        var saved = localStorage.getItem('audhd-theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body class="bg-background text-foreground min-h-svh flex flex-col items-center justify-center px-8 text-center">
+    <span class="font-mono text-[0.6875rem] tracking-[0.2em] uppercase text-primary block mb-6">404</span>
+    <h1 class="font-display text-[clamp(2rem,5vw,3.5rem)] font-bold tracking-tight text-foreground mb-4">
+      Seite nicht gefunden
+    </h1>
+    <p class="text-text2 font-light mb-10 max-w-md">
+      Diese Seite existiert nicht oder wurde verschoben.
+    </p>
+    <a
+      href="/de/"
+      class="inline-flex items-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-md font-mono text-[0.8125rem] tracking-[0.1em] uppercase no-underline transition-all hover:-translate-y-0.5"
+    >
+      Zur Startseite
+    </a>
+  </body>
+</html>

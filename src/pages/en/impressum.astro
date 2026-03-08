@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import '../../styles/global.css';
+
+import globalData from '../../content/settings/global.json';
+import impressumData from '../../content/pages/impressum.en.json';
+
+const lang = 'en';
+---
+
+<BaseLayout
+  title="Legal Notice – AuDHD-Flow"
+  description="Legal notice and company information of Markenkern AG, AuDHD-Flow."
+  lang={lang}
+>
+  <Navbar lang={lang} global={globalData} />
+  <main class="pt-32 pb-20 px-8">
+    <div class="max-w-[680px] mx-auto">
+      <h1 class="font-display text-3xl font-bold tracking-tight text-foreground mb-8">
+        {impressumData.title}
+      </h1>
+
+      <div class="space-y-8 font-body text-sm leading-relaxed text-muted-foreground">
+        {impressumData.sections.map((section) => (
+          <section>
+            {section.heading && (
+              <h2 class="font-display text-lg font-semibold text-foreground mb-2">
+                {section.heading}
+              </h2>
+            )}
+            <div set:html={section.content} />
+          </section>
+        ))}
+      </div>
+    </div>
+  </main>
+  <Footer lang={lang} global={globalData} />
+</BaseLayout>

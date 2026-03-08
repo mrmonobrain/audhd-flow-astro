@@ -1,0 +1,82 @@
+---
+interface Props {
+  lang: 'de' | 'en';
+  global: {
+    navbar: {
+      linkModesDe: string;
+      linkModesEn: string;
+      linkScienceDe: string;
+      linkScienceEn: string;
+      linkSignupDe: string;
+      linkSignupEn: string;
+    };
+  };
+}
+
+const { lang, global } = Astro.props;
+const n = global.navbar;
+const prefix = `/${lang}`;
+const altLang = lang === 'de' ? 'en' : 'de';
+const altPath = Astro.url.pathname.replace(`/${lang}`, `/${altLang}`);
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-5 border-b border-border bg-[hsl(var(--nav-bg))] backdrop-blur-xl backdrop-saturate-[180%]">
+  <a href={`${prefix}/`} class="flex items-center gap-3 no-underline">
+    <img src="/images/audhd-logo.jpg" alt="AuDHD-Flow" class="w-7 h-7 rounded-sm" loading="eager" />
+    <span class="font-display text-[0.9375rem] font-bold tracking-[0.15em] uppercase text-foreground">
+      AuDHD-Flow
+    </span>
+  </a>
+
+  <div class="flex items-center gap-4">
+    <ul class="hidden md:flex items-center gap-8 list-none m-0 p-0">
+      <li>
+        <a href="#modes" class="font-mono text-xs tracking-[0.12em] uppercase text-text2 hover:text-primary-light transition-colors no-underline">
+          {lang === 'de' ? n.linkModesDe : n.linkModesEn}
+        </a>
+      </li>
+      <li>
+        <a href="#science" class="font-mono text-xs tracking-[0.12em] uppercase text-text2 hover:text-primary-light transition-colors no-underline">
+          {lang === 'de' ? n.linkScienceDe : n.linkScienceEn}
+        </a>
+      </li>
+      <li>
+        <a href="#download" class="font-mono text-xs tracking-[0.12em] uppercase text-text2 hover:text-primary-light transition-colors no-underline">
+          {lang === 'de' ? n.linkSignupDe : n.linkSignupEn}
+        </a>
+      </li>
+    </ul>
+
+    <!-- Language switcher -->
+    <div class="flex items-center gap-1.5 bg-surface2 border border-border rounded-md p-1">
+      <a
+        href={lang === 'de' ? Astro.url.pathname : altPath}
+        class={`px-2 py-1 font-mono text-[0.6875rem] tracking-[0.1em] rounded-sm transition-all no-underline ${lang === 'de' ? 'bg-primary text-primary-foreground' : 'bg-transparent text-text3'}`}
+      >
+        DE
+      </a>
+      <a
+        href={lang === 'en' ? Astro.url.pathname : altPath}
+        class={`px-2 py-1 font-mono text-[0.6875rem] tracking-[0.1em] rounded-sm transition-all no-underline ${lang === 'en' ? 'bg-primary text-primary-foreground' : 'bg-transparent text-text3'}`}
+      >
+        EN
+      </a>
+    </div>
+
+    <!-- Theme toggle -->
+    <button
+      id="theme-toggle"
+      aria-label="Toggle dark mode"
+      class="flex items-center justify-center w-[34px] h-[34px] bg-surface2 border border-border rounded-md cursor-pointer text-text2 hover:border-teal-border hover:text-primary transition-all"
+    >
+      <!-- Sun icon (shown in dark mode) -->
+      <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden dark:block">
+        <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+      </svg>
+      <!-- Moon icon (shown in light mode) -->
+      <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="block dark:hidden">
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+      </svg>
+    </button>
+  </div>
+</nav>

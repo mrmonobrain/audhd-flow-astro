@@ -1,0 +1,138 @@
+{
+  "hero": {
+    "eyebrow": "Neuro-Acoustic Frequency Architecture",
+    "headlineLine1": "Your brain has",
+    "headlinePrimary": "no bouncer.",
+    "headlineLine3": "We built one.",
+    "subheadline": "No meditation. No music. A precise external regulator for your nervous system – built on validated psychoacoustic principles.",
+    "ctaPrimary": "Sign up now",
+    "ctaSecondary": "Learn more"
+  },
+  "problem": {
+    "eyebrow": "The Problem",
+    "headline": "The open filter",
+    "body1": "The neurodivergent brain has no automatic gate between stimulus and perception. Sound, light, thoughts – everything arrives simultaneously and unfiltered.",
+    "body2": "The result: you filter consciously. That costs massive energy. By afternoon your mental battery is empty – not from work, but from the heavy labour of sensory processing.",
+    "quote": "\"Instead of cognitive compensation, AuDHD-Flow provides physiological relief – bottom-up instead of top-down.\"",
+    "stats": [
+      { "number": "3–5%", "text": "of the population with combined AuDHD profile – barely addressed." },
+      { "number": "×4", "text": "increased sensory processing load compared to neurotypical individuals." },
+      { "number": "0", "text": "apps on the market addressing ADHD stimulation AND autism predictability simultaneously." }
+    ]
+  },
+  "modes": {
+    "eyebrow": "The App",
+    "headline": "6 modes. One architecture.",
+    "items": [
+      {
+        "color": "grey", "dotColor": "#888",
+        "badge": "Shield",
+        "name": "BASIS",
+        "hz": "Pink Noise · 12 Hz",
+        "desc": "Pink noise with the mathematical structure of natural sounds. Masks ambient noise – your brain stops scanning the environment. Acoustic immune system.",
+        "wide": false
+      },
+      {
+        "color": "blue", "dotColor": "#5B9BD5",
+        "badge": "Drive",
+        "name": "FOKUS",
+        "hz": "Beta · 20 Hz",
+        "desc": "Binaural beat in beta range. Like glasses for the frontal lobe. For admin, email, complex tasks.",
+        "wide": false
+      },
+      {
+        "color": "teal", "dotColor": "hsl(184, 100%, 27%)",
+        "badge": "Balance",
+        "name": "RUHE",
+        "hz": "Alpha · 10 Hz",
+        "desc": "Alpha entrainment for relaxed alertness. Between focus and rest – ideal for creative work.",
+        "wide": false
+      },
+      {
+        "color": "green", "dotColor": "hsl(155, 41%, 39%)",
+        "badge": "Depth",
+        "name": "MEDITATION",
+        "hz": "Theta · 6 Hz",
+        "desc": "Theta induction for deep relaxation. Anxiety relief and transition to quieter states of consciousness.",
+        "wide": false
+      },
+      {
+        "color": "brown", "dotColor": "#8B6A50",
+        "badge": "Transition",
+        "name": "ABEND",
+        "hz": "Delta · 2 Hz",
+        "desc": "Delta frequencies for the transition to sleep. Gently powering down the nervous system.",
+        "wide": false
+      },
+      {
+        "color": "rose", "dotColor": "#C46A8A",
+        "badge": "Emergency Anchor",
+        "name": "SAFE SPACE",
+        "hz": "Heartbeat · Theta · 6 Hz · Brown Noise",
+        "desc": "The emergency button. Brown noise + heartbeat at 58 BPM (vagus nerve stimulation). When everything becomes too much, this mode mechanically slows your pulse. Radical stillness – no surprises.",
+        "wide": true
+      }
+    ]
+  },
+  "science": {
+    "eyebrow": "Science",
+    "headline": "The physics\nbehind it",
+    "readMoreLink": "Read full indication",
+    "principles": [
+      {
+        "num": "01",
+        "title": "Stochastic Resonance",
+        "body": "Moderate background noise significantly improves cognitive performance at low dopaminergic activity – by raising the signal threshold. (Sikström et al.)"
+      },
+      {
+        "num": "02",
+        "title": "Brainwave Entrainment",
+        "body": "The brain synchronises to rhythmic external stimuli (frequency following response). EEG studies confirm inducibility of beta, alpha and theta waves. (Huang & Charyton)"
+      },
+      {
+        "num": "03",
+        "title": "Lossless Audio",
+        "body": "The neurodivergent brain unconsciously registers MP3 compression artefacts as stress. AuDHD-Flow generates mathematically pure sine waves in real time via Web Audio API."
+      }
+    ],
+    "paradox": {
+      "title": "The AuDHD Paradox",
+      "subtitle": "Two opposing needs – one architecture.",
+      "adhdPole": "ADHD-Pole",
+      "adhdNeed": "Stimulation",
+      "asdPole": "ASD-Pole",
+      "asdNeed": "Stillness / Safety",
+      "solution": "AuDHD-Flow – Both poles united",
+      "solutionDesc": "LFO modulation (stimulation) + Gapless looping (stillness) + 58 BPM heartbeat (vagal)"
+    }
+  },
+  "techNote": {
+    "items": [
+      {
+        "icon": "🎧",
+        "title": "Headphones Required",
+        "desc": "Only in-ear or noise-cancelling creates the closed acoustic space required for binaural effect."
+      },
+      {
+        "icon": "〜",
+        "title": "Lossless Audio",
+        "desc": "No MP3. Real-time oscillators via Web Audio API. Mathematically pure sine waves – zero compression artefacts."
+      },
+      {
+        "icon": "◯",
+        "title": "No Tracking",
+        "desc": "No analytics, no forced subscription, no third-party data. The app works completely offline."
+      }
+    ]
+  },
+  "download": {
+    "eyebrow": "Get started",
+    "headline": "Headphones in.\nChoose mode.\nLet go.",
+    "subheadline": "AuDHD-Flow is in development. Sign up and be the first to know when the app is available – for iOS and Android.",
+    "waitlistLabel": "Waitlist – iOS & Android",
+    "emailPlaceholder": "Email address",
+    "submitLabel": "Sign up",
+    "successMessage": "Signed up – we'll let you know!",
+    "errorMessage": "Something went wrong. Please try again."
+  }
+}

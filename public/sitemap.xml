@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://audhd-flow.ch/de/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://audhd-flow.ch/de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://audhd-flow.ch/en/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://audhd-flow.ch/en/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://audhd-flow.ch/de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://audhd-flow.ch/en/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://audhd-flow.ch/de/impressum</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://audhd-flow.ch/de/impressum"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://audhd-flow.ch/en/impressum"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://audhd-flow.ch/en/impressum</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://audhd-flow.ch/de/impressum"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://audhd-flow.ch/en/impressum"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://audhd-flow.ch/de/datenschutz</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://audhd-flow.ch/de/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://audhd-flow.ch/en/datenschutz"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://audhd-flow.ch/en/datenschutz</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://audhd-flow.ch/de/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://audhd-flow.ch/en/datenschutz"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

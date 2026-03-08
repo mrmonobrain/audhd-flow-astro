@@ -1,0 +1,36 @@
+{
+  "siteName": "AuDHD-Flow",
+  "siteUrl": "https://audhd-flow.ch",
+  "siteDescriptionDe": "Neuroakustische Klangmodi für Fokus, Ruhe und Regulation – entwickelt für ADHS, Autismus und AuDHD.",
+  "siteDescriptionEn": "Neuro-acoustic sound modes for focus, calm and regulation – built for ADHD, Autism and AuDHD.",
+  "ogImage": "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0ec5e839-bd3d-4790-8a9f-f7e645295e8d/id-preview-6b64c05b--6da6ab36-1db0-4cd9-ac37-f668cfbf8097.lovable.app-1771354989116.png",
+  "author": "Markenkern AG",
+  "navbar": {
+    "linkModesDe": "Modi",
+    "linkModesEn": "Modes",
+    "linkScienceDe": "Wissenschaft",
+    "linkScienceEn": "Science",
+    "linkSignupDe": "Eintragen",
+    "linkSignupEn": "Sign up"
+  },
+  "footer": {
+    "tagline1De": "Physik für dein Nervensystem",
+    "tagline1En": "Physics for your nervous system",
+    "tagline2De": "Designed & Engineered in Switzerland",
+    "tagline2En": "Designed & Engineered in Switzerland",
+    "impressumDe": "Impressum",
+    "impressumEn": "Legal",
+    "datenschutzDe": "Datenschutz",
+    "datenschutzEn": "Privacy"
+  },
+  "cookie": {
+    "textDe": "Diese Website verwendet nur technisch notwendige Cookies. Keine Tracker, keine Werbung.",
+    "textEn": "This website uses only technically necessary cookies. No trackers, no ads.",
+    "acceptDe": "Akzeptieren",
+    "acceptEn": "Accept",
+    "declineDe": "Ablehnen",
+    "declineEn": "Decline",
+    "privacyLinkDe": "Datenschutz",
+    "privacyLinkEn": "Privacy Policy"
+  }
+}

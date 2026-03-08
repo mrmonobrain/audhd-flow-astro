@@ -1,0 +1,53 @@
+---
+interface Props {
+  lang: 'de' | 'en';
+  global: {
+    cookie: {
+      textDe: string;
+      textEn: string;
+      acceptDe: string;
+      acceptEn: string;
+      declineDe: string;
+      declineEn: string;
+      privacyLinkDe: string;
+      privacyLinkEn: string;
+    };
+  };
+}
+
+const { lang, global } = Astro.props;
+const c = global.cookie;
+const prefix = `/${lang}`;
+---
+
+<div
+  id="cookie-banner"
+  class="fixed bottom-0 left-0 right-0 z-[60] p-4 md:p-6"
+  style="display: none;"
+>
+  <div class="mx-auto max-w-2xl rounded-lg border border-border bg-card/95 backdrop-blur-xl p-5 shadow-lg">
+    <p class="font-body text-sm text-muted-foreground leading-relaxed mb-4">
+      {lang === 'de' ? c.textDe : c.textEn}{' '}
+      <a
+        href={`${prefix}/datenschutz`}
+        class="text-primary underline underline-offset-2 hover:text-primary-light transition-colors"
+      >
+        {lang === 'de' ? c.privacyLinkDe : c.privacyLinkEn}
+      </a>
+    </p>
+    <div class="flex items-center gap-3">
+      <button
+        id="cookie-accept"
+        class="px-4 py-2 rounded-md bg-primary text-primary-foreground font-mono text-xs tracking-widest uppercase hover:bg-primary/90 transition-colors cursor-pointer border-none"
+      >
+        {lang === 'de' ? c.acceptDe : c.acceptEn}
+      </button>
+      <button
+        id="cookie-decline"
+        class="px-4 py-2 rounded-md bg-transparent border border-border text-muted-foreground font-mono text-xs tracking-widest uppercase hover:border-[hsl(var(--teal-border))] hover:text-foreground transition-colors cursor-pointer"
+      >
+        {lang === 'de' ? c.declineDe : c.declineEn}
+      </button>
+    </div>
+  </div>
+</div>

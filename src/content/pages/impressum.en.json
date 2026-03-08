@@ -1,0 +1,49 @@
+{
+  "title": "Legal Notice",
+  "sections": [
+    {
+      "heading": "Contact Address",
+      "content": "<strong class=\"text-foreground\">Markenkern AG</strong><br>Fabio Aresu<br>Bahnhofstrasse 7<br>CH-7000 Chur"
+    },
+    {
+      "heading": null,
+      "content": "Phone: +41 81 322 98 88<br>Email: <a href=\"mailto:info@markenkern.ch\" class=\"text-primary hover:text-primary-light transition-colors underline underline-offset-2\">info@markenkern.ch</a><br>Website: audhd-flow.ch"
+    },
+    {
+      "heading": null,
+      "content": "UID: CHE-113.666.692<br>Company number: CH-350.3.010.200-8"
+    },
+    {
+      "heading": "Responsible for AuDHD-Flow",
+      "content": "AuDHD-Flow is a product of Markenkern AG.<br>Responsible person: Fabio Aresu<br>Email: <a href=\"mailto:privacy@audhd-flow.ch\" class=\"text-primary hover:text-primary-light transition-colors underline underline-offset-2\">privacy@audhd-flow.ch</a>"
+    },
+    {
+      "heading": "Data Protection Officer",
+      "content": "Fabio Aresu<br>Markenkern AG, Bahnhofstrasse 7, CH-7000 Chur<br>Email: <a href=\"mailto:privacy@audhd-flow.ch\" class=\"text-primary hover:text-primary-light transition-colors underline underline-offset-2\">privacy@audhd-flow.ch</a>"
+    },
+    {
+      "heading": "Disclaimer",
+      "content": "Markenkern AG assumes no liability for the correctness, accuracy, timeliness, reliability, or completeness of the information provided on this website and in the app."
+    },
+    {
+      "heading": null,
+      "content": "<p class=\"p-3 rounded-md bg-accent/50 border border-border text-foreground\"><strong>Medical Notice:</strong> AuDHD-Flow is not a medical product and does not replace medical or therapeutic treatment. The app is designed for self-regulation and everyday support. For health concerns, please consult a medical professional.</p>"
+    },
+    {
+      "heading": null,
+      "content": "Claims for damages of a material or immaterial nature arising from access to or use or non-use of the published information are excluded."
+    },
+    {
+      "heading": "Liability for Links",
+      "content": "References and links to third-party websites are outside our area of responsibility. Any responsibility for such websites is rejected. Access is at your own risk."
+    },
+    {
+      "heading": "Copyrights",
+      "content": "All rights to content, texts, graphics, logos, the sound system, and the technology of AuDHD-Flow belong exclusively to Markenkern AG. Reproduction of any elements requires written consent from Markenkern AG."
+    },
+    {
+      "heading": null,
+      "content": "The name 'AuDHD-Flow' and the intertwined knot logo are trademarks of Markenkern AG."
+    }
+  ]
+}

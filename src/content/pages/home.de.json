@@ -1,0 +1,138 @@
+{
+  "hero": {
+    "eyebrow": "Neuro-akustische Frequenz-Architektur",
+    "headlineLine1": "Dein Kopf hat",
+    "headlinePrimary": "keinen Türsteher.",
+    "headlineLine3": "Wir geben ihm einen.",
+    "subheadline": "Kein Meditieren. Keine Musik. Ein präziser Taktgeber für dein Nervensystem – gebaut auf validierten psychoakustischen Prinzipien.",
+    "ctaPrimary": "Jetzt eintragen",
+    "ctaSecondary": "Mehr erfahren"
+  },
+  "problem": {
+    "eyebrow": "Das Problem",
+    "headline": "Der offene Filter",
+    "body1": "Das neurodivergente Gehirn hat keine automatische Schleuse zwischen Reiz und Wahrnehmung. Geräusche, Licht, Gedanken – alles trifft gleichzeitig und ungefiltert ein.",
+    "body2": "Das Resultat: Du filterst bewusst. Das kostet massiv Energie. Am Nachmittag ist dein mentaler Akku leer – nicht wegen der Arbeit, sondern wegen der Schwerstarbeit der Reizverarbeitung.",
+    "quote": "\u201EStatt kognitiver Kompensation bietet AuDHD-Flow eine physiologische Entlastung \u2013 Bottom-Up statt Top-Down.\u201C",
+    "stats": [
+      { "number": "3–5%", "text": "der Bevölkerung mit kombiniertem AuDHD-Profil – kaum adressiert." },
+      { "number": "×4", "text": "erhöhte sensorische Verarbeitungslast gegenüber neurotypischen Personen." },
+      { "number": "0", "text": "Apps am Markt, die ADHS-Stimulation UND Autismus-Statik gleichzeitig bedienen." }
+    ]
+  },
+  "modes": {
+    "eyebrow": "Die App",
+    "headline": "6 Modi. Eine Architektur.",
+    "items": [
+      {
+        "color": "grey", "dotColor": "#888",
+        "badge": "Schutzschild",
+        "name": "BASIS",
+        "hz": "Pink Noise · 12 Hz",
+        "desc": "Pink Noise mit der mathematischen Struktur von Naturgeräuschen. Maskiert Umgebungslärm – dein Gehirn muss die Umgebung nicht mehr scannen. Akustisches Immunsystem.",
+        "wide": false
+      },
+      {
+        "color": "blue", "dotColor": "#5B9BD5",
+        "badge": "Antrieb",
+        "name": "FOKUS",
+        "hz": "Beta · 20 Hz",
+        "desc": "Binaural Beat im Beta-Bereich. Wie eine Brille für den Frontallappen. Für Admin, Mails, komplexe Tasks.",
+        "wide": false
+      },
+      {
+        "color": "teal", "dotColor": "hsl(184, 100%, 27%)",
+        "badge": "Balance",
+        "name": "RUHE",
+        "hz": "Alpha · 10 Hz",
+        "desc": "Alpha-Entrainment für entspannte Wachheit. Zwischen Fokus und Entspannung – ideal für kreative Arbeit.",
+        "wide": false
+      },
+      {
+        "color": "green", "dotColor": "hsl(155, 41%, 39%)",
+        "badge": "Vertiefung",
+        "name": "MEDITATION",
+        "hz": "Theta · 6 Hz",
+        "desc": "Theta-Induktion für tiefe Entspannung. Angstlösung und Übergang in ruhigere Bewusstseinszustände.",
+        "wide": false
+      },
+      {
+        "color": "brown", "dotColor": "#8B6A50",
+        "badge": "Übergang",
+        "name": "ABEND",
+        "hz": "Delta · 2 Hz",
+        "desc": "Delta-Frequenzen für den Übergang zum Schlaf. Das Nervensystem sanft runterfahren.",
+        "wide": false
+      },
+      {
+        "color": "rose", "dotColor": "#C46A8A",
+        "badge": "Notfall-Anker",
+        "name": "SAFE SPACE",
+        "hz": "Heartbeat · Theta · 6 Hz · Brown Noise",
+        "desc": "Der Notfall-Knopf. Brown Noise + Herzschlag bei 58 BPM (Vagusnerv-Stimulation). Wenn alles zu viel wird, bremst dieser Modus deinen Puls mechanisch ab. Radikale Statik – keine Überraschungen.",
+        "wide": true
+      }
+    ]
+  },
+  "science": {
+    "eyebrow": "Wissenschaft",
+    "headline": "Die Physik\ndahinter",
+    "readMoreLink": "Vollständige Indikation lesen",
+    "principles": [
+      {
+        "num": "01",
+        "title": "Stochastische Resonanz",
+        "body": "Moderates Hintergrundrauschen verbessert die kognitive Leistung bei niedriger dopaminerger Aktivität signifikant – durch Anhebung der Reizschwelle. (Sikström et al.)"
+      },
+      {
+        "num": "02",
+        "title": "Brainwave Entrainment",
+        "body": "Das Gehirn synchronisiert sich auf rhythmische externe Reize (Frequenz-Folge-Reaktion). EEG-Studien belegen die Induzierbarkeit von Beta-, Alpha- und Theta-Wellen. (Huang & Charyton)"
+      },
+      {
+        "num": "03",
+        "title": "Lossless Audio",
+        "body": "Das neurodivergente Gehirn registriert akustische Artefakte aus MP3-Kompression unbewusst als Stress. AuDHD-Flow generiert mathematisch reine Sinuswellen in Echtzeit via Web Audio API."
+      }
+    ],
+    "paradox": {
+      "title": "Das AuDHD-Paradoxon",
+      "subtitle": "Zwei gegensätzliche Bedürfnisse – eine Architektur.",
+      "adhdPole": "ADHS-Pol",
+      "adhdNeed": "Stimulation",
+      "asdPole": "ASS-Pol",
+      "asdNeed": "Statik / Sicherheit",
+      "solution": "AuDHD-Flow – Beide Pole vereint",
+      "solutionDesc": "LFO-Modulation (Stimulation) + Gapless Looping (Statik) + 58 BPM Herzschlag (Vagal)"
+    }
+  },
+  "techNote": {
+    "items": [
+      {
+        "icon": "🎧",
+        "title": "Kopfhörer Pflicht",
+        "desc": "Nur mit In-Ear oder Noise-Cancelling entsteht der geschlossene akustische Raum für binaurale Wirkung."
+      },
+      {
+        "icon": "〜",
+        "title": "Lossless Audio",
+        "desc": "Kein MP3. Echtzeit-Oszillatoren via Web Audio API. Mathematisch reine Sinuswelle – keine Kompressionsartefakte."
+      },
+      {
+        "icon": "◯",
+        "title": "Kein Tracking",
+        "desc": "Keine Analyse, kein Abo-Zwang, keine Daten an Dritte. Die App funktioniert komplett offline."
+      }
+    ]
+  },
+  "download": {
+    "eyebrow": "Jetzt starten",
+    "headline": "Kopfhörer rein.\nModus wählen.\nLoslassen.",
+    "subheadline": "AuDHD-Flow befindet sich in Entwicklung. Trag dich ein und erfahre als Erste/r, wenn die App verfügbar ist – für iOS und Android.",
+    "waitlistLabel": "Warteliste – iOS & Android",
+    "emailPlaceholder": "E-Mail-Adresse",
+    "submitLabel": "Eintragen",
+    "successMessage": "Eingetragen – wir melden uns!",
+    "errorMessage": "Etwas ist schiefgelaufen. Bitte versuche es erneut."
+  }
+}

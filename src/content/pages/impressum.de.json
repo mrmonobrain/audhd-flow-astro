@@ -1,0 +1,49 @@
+{
+  "title": "Impressum",
+  "sections": [
+    {
+      "heading": "Kontaktadresse",
+      "content": "<strong class=\"text-foreground\">Markenkern AG</strong><br>Fabio Aresu<br>Bahnhofstrasse 7<br>CH-7000 Chur"
+    },
+    {
+      "heading": null,
+      "content": "Telefon: +41 81 322 98 88<br>E-Mail: <a href=\"mailto:info@markenkern.ch\" class=\"text-primary hover:text-primary-light transition-colors underline underline-offset-2\">info@markenkern.ch</a><br>Website: audhd-flow.ch"
+    },
+    {
+      "heading": null,
+      "content": "UID: CHE-113.666.692<br>Firmennummer: CH-350.3.010.200-8"
+    },
+    {
+      "heading": "Verantwortlich für AuDHD-Flow",
+      "content": "AuDHD-Flow ist ein Produkt der Markenkern AG.<br>Verantwortliche Person: Fabio Aresu<br>E-Mail: <a href=\"mailto:privacy@audhd-flow.ch\" class=\"text-primary hover:text-primary-light transition-colors underline underline-offset-2\">privacy@audhd-flow.ch</a>"
+    },
+    {
+      "heading": "Datenschutzbeauftragte Person",
+      "content": "Fabio Aresu<br>Markenkern AG, Bahnhofstrasse 7, CH-7000 Chur<br>E-Mail: <a href=\"mailto:privacy@audhd-flow.ch\" class=\"text-primary hover:text-primary-light transition-colors underline underline-offset-2\">privacy@audhd-flow.ch</a>"
+    },
+    {
+      "heading": "Haftungsausschluss",
+      "content": "Die Markenkern AG übernimmt keinerlei Gewähr hinsichtlich der inhaltlichen Richtigkeit, Genauigkeit, Aktualität, Zuverlässigkeit und Vollständigkeit der auf dieser Website und in der App bereitgestellten Informationen."
+    },
+    {
+      "heading": null,
+      "content": "<p class=\"p-3 rounded-md bg-accent/50 border border-border text-foreground\"><strong>Medizinischer Hinweis:</strong> AuDHD-Flow ist kein medizinisches Produkt und ersetzt keine ärztliche oder therapeutische Behandlung. Die App dient der Selbstregulation und Unterstützung im Alltag. Bei gesundheitlichen Beschwerden wenden Sie sich an eine medizinische Fachperson.</p>"
+    },
+    {
+      "heading": null,
+      "content": "Haftungsansprüche wegen Schäden materieller oder immaterieller Art, die aus dem Zugriff oder der Nutzung bzw. Nichtnutzung der veröffentlichten Informationen entstanden sind, werden ausgeschlossen."
+    },
+    {
+      "heading": "Haftung für Links",
+      "content": "Verweise und Links auf Webseiten Dritter liegen ausserhalb unseres Verantwortungsbereichs. Jegliche Verantwortung für solche Webseiten wird abgelehnt. Der Zugriff erfolgt auf eigene Gefahr."
+    },
+    {
+      "heading": "Urheberrechte",
+      "content": "Alle Rechte an Inhalten, Texten, Grafiken, Logos, dem Klang-System und der Technologie von AuDHD-Flow liegen ausschliesslich bei der Markenkern AG. Die Reproduktion jeglicher Elemente bedarf der schriftlichen Zustimmung der Markenkern AG."
+    },
+    {
+      "heading": null,
+      "content": "Der Name «AuDHD-Flow» sowie das verschlungene Knotenlogo sind Kennzeichen der Markenkern AG."
+    }
+  ]
+}

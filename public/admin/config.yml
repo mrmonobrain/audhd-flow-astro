@@ -1,0 +1,294 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: public/images
+public_folder: /images
+
+locale: de
+
+collections:
+  # ─── SITE SETTINGS ───────────────────────────────────────────────────────
+  - name: settings
+    label: "⚙️ Website-Einstellungen"
+    files:
+      - name: global
+        label: "Globale Einstellungen"
+        file: src/content/settings/global.json
+        fields:
+          - { label: "Site Name", name: siteName, widget: string }
+          - { label: "Site URL", name: siteUrl, widget: string }
+          - { label: "Meta-Beschreibung (DE)", name: siteDescriptionDe, widget: text }
+          - { label: "Meta-Beschreibung (EN)", name: siteDescriptionEn, widget: text }
+          - { label: "OG-Bild URL", name: ogImage, widget: string }
+          - { label: "Autor", name: author, widget: string }
+          - label: "Navbar"
+            name: navbar
+            widget: object
+            fields:
+              - { label: "Modi-Link (DE)", name: linkModesDe, widget: string }
+              - { label: "Modes-Link (EN)", name: linkModesEn, widget: string }
+              - { label: "Wissenschaft-Link (DE)", name: linkScienceDe, widget: string }
+              - { label: "Science-Link (EN)", name: linkScienceEn, widget: string }
+              - { label: "Eintragen-Link (DE)", name: linkSignupDe, widget: string }
+              - { label: "Sign up-Link (EN)", name: linkSignupEn, widget: string }
+          - label: "Footer"
+            name: footer
+            widget: object
+            fields:
+              - { label: "Tagline 1 (DE)", name: tagline1De, widget: string }
+              - { label: "Tagline 1 (EN)", name: tagline1En, widget: string }
+              - { label: "Tagline 2 (DE)", name: tagline2De, widget: string }
+              - { label: "Tagline 2 (EN)", name: tagline2En, widget: string }
+              - { label: "Impressum-Label (DE)", name: impressumDe, widget: string }
+              - { label: "Legal-Label (EN)", name: impressumEn, widget: string }
+              - { label: "Datenschutz-Label (DE)", name: datenschutzDe, widget: string }
+              - { label: "Privacy-Label (EN)", name: datenschutzEn, widget: string }
+          - label: "Cookie-Banner"
+            name: cookie
+            widget: object
+            fields:
+              - { label: "Text (DE)", name: textDe, widget: text }
+              - { label: "Text (EN)", name: textEn, widget: text }
+              - { label: "Akzeptieren (DE)", name: acceptDe, widget: string }
+              - { label: "Accept (EN)", name: acceptEn, widget: string }
+              - { label: "Ablehnen (DE)", name: declineDe, widget: string }
+              - { label: "Decline (EN)", name: declineEn, widget: string }
+              - { label: "Datenschutz-Link-Text (DE)", name: privacyLinkDe, widget: string }
+              - { label: "Privacy Link Text (EN)", name: privacyLinkEn, widget: string }
+
+  # ─── HOME PAGE ────────────────────────────────────────────────────────────
+  - name: home
+    label: "🏠 Startseite"
+    files:
+      - name: home_de
+        label: "Startseite – Deutsch"
+        file: src/content/pages/home.de.json
+        fields:
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Headline Zeile 1", name: headlineLine1, widget: string }
+              - { label: "Headline Primär (Farbe)", name: headlinePrimary, widget: string }
+              - { label: "Headline Zeile 3", name: headlineLine3, widget: string }
+              - { label: "Subheadline", name: subheadline, widget: text }
+              - { label: "CTA Primär", name: ctaPrimary, widget: string }
+              - { label: "CTA Sekundär", name: ctaSecondary, widget: string }
+
+          - label: "Problem-Section"
+            name: problem
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Headline", name: headline, widget: string }
+              - { label: "Text 1", name: body1, widget: text }
+              - { label: "Text 2", name: body2, widget: text }
+              - { label: "Zitat", name: quote, widget: text }
+              - label: "Statistiken"
+                name: stats
+                widget: list
+                fields:
+                  - { label: "Zahl", name: number, widget: string }
+                  - { label: "Text", name: text, widget: string }
+
+          - label: "Modi-Section"
+            name: modes
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Headline", name: headline, widget: string }
+              - label: "Modi"
+                name: items
+                widget: list
+                fields:
+                  - { label: "Farbe", name: color, widget: string }
+                  - { label: "Punkt-Farbe", name: dotColor, widget: string }
+                  - { label: "Badge", name: badge, widget: string }
+                  - { label: "Name", name: name, widget: string }
+                  - { label: "Frequenz", name: hz, widget: string }
+                  - { label: "Beschreibung", name: desc, widget: text }
+                  - { label: "Breit (volle Breite)", name: wide, widget: boolean, default: false }
+
+          - label: "Wissenschaft-Section"
+            name: science
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Headline", name: headline, widget: text }
+              - { label: "Mehr-lesen-Link", name: readMoreLink, widget: string }
+              - label: "Prinzipien"
+                name: principles
+                widget: list
+                fields:
+                  - { label: "Nummer", name: num, widget: string }
+                  - { label: "Titel", name: title, widget: string }
+                  - { label: "Text", name: body, widget: text }
+              - label: "Paradoxon-Karte"
+                name: paradox
+                widget: object
+                fields:
+                  - { label: "Titel", name: title, widget: string }
+                  - { label: "Untertitel", name: subtitle, widget: string }
+                  - { label: "ADHS-Pol Label", name: adhdPole, widget: string }
+                  - { label: "ADHS Bedürfnis", name: adhdNeed, widget: string }
+                  - { label: "ASS-Pol Label", name: asdPole, widget: string }
+                  - { label: "ASS Bedürfnis", name: asdNeed, widget: string }
+                  - { label: "Lösung Label", name: solution, widget: string }
+                  - { label: "Lösung Beschreibung", name: solutionDesc, widget: text }
+
+          - label: "Tech-Note"
+            name: techNote
+            widget: object
+            fields:
+              - label: "Items"
+                name: items
+                widget: list
+                fields:
+                  - { label: "Icon (Emoji)", name: icon, widget: string }
+                  - { label: "Titel", name: title, widget: string }
+                  - { label: "Beschreibung", name: desc, widget: text }
+
+          - label: "Download-Section (Warteliste)"
+            name: download
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Headline", name: headline, widget: text }
+              - { label: "Subheadline", name: subheadline, widget: text }
+              - { label: "Wartelisten-Label", name: waitlistLabel, widget: string }
+              - { label: "E-Mail-Platzhalter", name: emailPlaceholder, widget: string }
+              - { label: "Absenden-Button", name: submitLabel, widget: string }
+              - { label: "Erfolgs-Nachricht", name: successMessage, widget: string }
+              - { label: "Fehler-Nachricht", name: errorMessage, widget: string }
+
+      - name: home_en
+        label: "Home Page – English"
+        file: src/content/pages/home.en.json
+        fields:
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Headline Line 1", name: headlineLine1, widget: string }
+              - { label: "Headline Primary (colour)", name: headlinePrimary, widget: string }
+              - { label: "Headline Line 3", name: headlineLine3, widget: string }
+              - { label: "Subheadline", name: subheadline, widget: text }
+              - { label: "CTA Primary", name: ctaPrimary, widget: string }
+              - { label: "CTA Secondary", name: ctaSecondary, widget: string }
+
+          - label: "Problem Section"
+            name: problem
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Headline", name: headline, widget: string }
+              - { label: "Body 1", name: body1, widget: text }
+              - { label: "Body 2", name: body2, widget: text }
+              - { label: "Quote", name: quote, widget: text }
+              - label: "Stats"
+                name: stats
+                widget: list
+                fields:
+                  - { label: "Number", name: number, widget: string }
+                  - { label: "Text", name: text, widget: string }
+
+          - label: "Modes Section"
+            name: modes
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Headline", name: headline, widget: string }
+              - label: "Modes"
+                name: items
+                widget: list
+                fields:
+                  - { label: "Color key", name: color, widget: string }
+                  - { label: "Dot Color", name: dotColor, widget: string }
+                  - { label: "Badge", name: badge, widget: string }
+                  - { label: "Name", name: name, widget: string }
+                  - { label: "Frequency", name: hz, widget: string }
+                  - { label: "Description", name: desc, widget: text }
+                  - { label: "Wide (full width)", name: wide, widget: boolean, default: false }
+
+          - label: "Science Section"
+            name: science
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Headline", name: headline, widget: text }
+              - { label: "Read More Link", name: readMoreLink, widget: string }
+              - label: "Principles"
+                name: principles
+                widget: list
+                fields:
+                  - { label: "Number", name: num, widget: string }
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Body", name: body, widget: text }
+              - label: "Paradox Card"
+                name: paradox
+                widget: object
+                fields:
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Subtitle", name: subtitle, widget: string }
+                  - { label: "ADHD Pole Label", name: adhdPole, widget: string }
+                  - { label: "ADHD Need", name: adhdNeed, widget: string }
+                  - { label: "ASD Pole Label", name: asdPole, widget: string }
+                  - { label: "ASD Need", name: asdNeed, widget: string }
+                  - { label: "Solution Label", name: solution, widget: string }
+                  - { label: "Solution Description", name: solutionDesc, widget: text }
+
+          - label: "Tech Note"
+            name: techNote
+            widget: object
+            fields:
+              - label: "Items"
+                name: items
+                widget: list
+                fields:
+                  - { label: "Icon (emoji)", name: icon, widget: string }
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Description", name: desc, widget: text }
+
+          - label: "Download Section (Waitlist)"
+            name: download
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Headline", name: headline, widget: text }
+              - { label: "Subheadline", name: subheadline, widget: text }
+              - { label: "Waitlist Label", name: waitlistLabel, widget: string }
+              - { label: "Email Placeholder", name: emailPlaceholder, widget: string }
+              - { label: "Submit Button", name: submitLabel, widget: string }
+              - { label: "Success Message", name: successMessage, widget: string }
+              - { label: "Error Message", name: errorMessage, widget: string }
+
+  # ─── LEGAL PAGES ──────────────────────────────────────────────────────────
+  - name: legal
+    label: "⚖️ Rechtliches"
+    files:
+      - name: impressum_de
+        label: "Impressum (DE)"
+        file: src/content/pages/impressum.de.json
+        fields:
+          - { label: "Titel", name: title, widget: string }
+          - label: "Abschnitte"
+            name: sections
+            widget: list
+            fields:
+              - { label: "Überschrift (leer lassen falls keine)", name: heading, widget: string, required: false }
+              - { label: "Inhalt (HTML erlaubt)", name: content, widget: text }
+
+      - name: impressum_en
+        label: "Legal Notice (EN)"
+        file: src/content/pages/impressum.en.json
+        fields:
+          - { label: "Title", name: title, widget: string }
+          - label: "Sections"
+            name: sections
+            widget: list
+            fields:
+              - { label: "Heading (leave empty if none)", name: heading, widget: string, required: false }
+              - { label: "Content (HTML allowed)", name: content, widget: text }

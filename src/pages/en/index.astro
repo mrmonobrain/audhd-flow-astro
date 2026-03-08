@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Hero from '../../components/Hero.astro';
+import ProblemSection from '../../components/ProblemSection.astro';
+import ModesSection from '../../components/ModesSection.astro';
+import ScienceSection from '../../components/ScienceSection.astro';
+import TechNote from '../../components/TechNote.astro';
+import DownloadSection from '../../components/DownloadSection.astro';
+import Footer from '../../components/Footer.astro';
+import CookieBanner from '../../components/CookieBanner.astro';
+import '../../styles/global.css';
+
+import globalData from '../../content/settings/global.json';
+import homeData from '../../content/pages/home.en.json';
+
+const lang = 'en';
+---
+
+<BaseLayout
+  title="AuDHD-Flow – Your External Pacer"
+  description={globalData.siteDescriptionEn}
+  lang={lang}
+  ogImage={globalData.ogImage}
+>
+  <Navbar lang={lang} global={globalData} />
+  <main>
+    <Hero data={homeData.hero} />
+    <ProblemSection data={homeData.problem} />
+    <ModesSection data={homeData.modes} />
+    <ScienceSection data={homeData.science} />
+    <TechNote data={homeData.techNote} />
+    <DownloadSection lang={lang} data={homeData.download} />
+  </main>
+  <Footer lang={lang} global={globalData} />
+  <CookieBanner lang={lang} global={globalData} />
+</BaseLayout>

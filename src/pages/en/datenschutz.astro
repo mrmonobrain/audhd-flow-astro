@@ -1,0 +1,209 @@
+---
+// Redirect English /en/datenschutz to /en/privacy-policy equivalent
+// Since the page is called datenschutz in both languages for URL consistency
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import '../../styles/global.css';
+
+import globalData from '../../content/settings/global.json';
+
+const lang = 'en';
+---
+
+<BaseLayout
+  title="Privacy Policy – AuDHD-Flow"
+  description="Privacy policy of Markenkern AG for AuDHD-Flow. FADP compliant, Switzerland."
+  lang={lang}
+>
+  <Navbar lang={lang} global={globalData} />
+  <main class="pt-32 pb-20 px-8">
+    <div class="max-w-[680px] mx-auto">
+      <h1 class="font-display text-3xl font-bold tracking-tight text-foreground mb-4">
+        Privacy Policy
+      </h1>
+      <p class="font-mono text-xs text-muted-foreground tracking-wider uppercase mb-10">
+        As of: February 2026
+      </p>
+
+      <div class="space-y-10 font-body text-sm leading-relaxed text-muted-foreground">
+
+        <section>
+          <h2 class="font-display text-lg font-semibold text-foreground mb-2">1. General</h2>
+          <p>Based on Article 13 of the Swiss Federal Constitution and the provisions of the revised Federal Act on Data Protection (FADP, in force since September 1, 2023), every person is entitled to protection of their privacy and personal data.</p>
+          <p class="mt-3">Markenkern AG takes the protection of your data seriously. We process personal data confidentially and exclusively in accordance with this statement and applicable laws.</p>
+          <p class="mt-3">This privacy policy applies to:</p>
+          <ul class="list-disc pl-5 mt-2 space-y-1">
+            <li>the website audhd-flow.ch</li>
+            <li>the iOS app 'AuDHD-Flow' (Apple App Store)</li>
+            <li>the Android waitlist (email form)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-display text-lg font-semibold text-foreground mb-2">2. Responsible Party</h2>
+          <p><strong class="text-foreground">Markenkern AG</strong><br />Fabio Aresu<br />Bahnhofstrasse 7, CH-7000 Chur<br />UID: CHE-113.666.692</p>
+          <p class="mt-3">Responsible for AuDHD-Flow:<br />Fabio Aresu – <a href="mailto:privacy@audhd-flow.ch" class="text-primary hover:text-primary-light transition-colors underline underline-offset-2">privacy@audhd-flow.ch</a></p>
+        </section>
+
+        <section>
+          <h2 class="font-display text-lg font-semibold text-foreground mb-2">3. Data Protection Officer</h2>
+          <p>Fabio Aresu<br />Markenkern AG, Bahnhofstrasse 7, CH-7000 Chur<br />Email: <a href="mailto:privacy@audhd-flow.ch" class="text-primary hover:text-primary-light transition-colors underline underline-offset-2">privacy@audhd-flow.ch</a></p>
+          <p class="mt-3">For questions about data protection, please contact this person directly.</p>
+        </section>
+
+        <section>
+          <h2 class="font-display text-lg font-semibold text-foreground mb-2">4. Legal Basis for Data Processing</h2>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong class="text-foreground">Consent</strong> (Art. 6(6) FADP): e.g. cookie consent, waitlist registration</li>
+            <li><strong class="text-foreground">Contract fulfillment</strong>: e.g. app usage, customer service</li>
+            <li><strong class="text-foreground">Legitimate interests</strong> (Art. 31 FADP): e.g. website operation, security, statistics</li>
+            <li><strong class="text-foreground">Legal obligations</strong>: e.g. accounting, retention periods</li>
+          </ul>
+          <p class="mt-3">Where and insofar as the EU GDPR applies, we additionally rely on Art. 6(1) GDPR.</p>
+        </section>
+
+        <section>
+          <h2 class="font-display text-lg font-semibold text-foreground mb-2">5. Data We Process</h2>
+
+          <h3 class="font-display text-base font-medium text-foreground mt-4 mb-2">5.1 Website Visit (Server Log Files)</h3>
+          <p>When visiting audhd-flow.ch, we automatically collect:</p>
+          <ul class="list-disc pl-5 mt-2 space-y-1">
+            <li>IP address (anonymized)</li>
+            <li>Browser type and version</li>
+            <li>Operating system</li>
+            <li>Referrer URL</li>
+            <li>Date and time of request</li>
+            <li>Page visited</li>
+          </ul>
+          <p class="mt-3">This data cannot be directly attributed to a person. It serves technical security and is deleted after 30 days.</p>
+          <p class="mt-2"><strong class="text-foreground">Hosting:</strong> The website is hosted on servers of Netlify Inc.</p>
+
+          <h3 class="font-display text-base font-medium text-foreground mt-6 mb-2">5.2 Android Waitlist</h3>
+          <p>When you sign up for the Android version, we collect:</p>
+          <ul class="list-disc pl-5 mt-2 space-y-1">
+            <li>Email address</li>
+            <li>Registration timestamp</li>
+            <li>Platform preference</li>
+          </ul>
+          <p class="mt-3"><strong class="text-foreground">Purpose:</strong> Notification when the Android app becomes available.</p>
+          <p class="mt-1"><strong class="text-foreground">Storage:</strong> Via Netlify Forms.</p>
+          <p class="mt-1"><strong class="text-foreground">Deletion:</strong> After sending the notification or upon request at any time.</p>
+          <p class="mt-3">We do not share this data with third parties. You can revoke your consent at any time: <a href="mailto:privacy@audhd-flow.ch" class="text-primary hover:text-primary-light transition-colors underline underline-offset-2">privacy@audhd-flow.ch</a></p>
+
+          <h3 class="font-display text-base font-medium text-foreground mt-6 mb-2">5.3 The iOS App (AuDHD-Flow)</h3>
+          <p>The app itself collects no personal data. It works completely offline. No usage data, location data, audio data, or behavioral profiles are collected or transmitted.</p>
+          <p class="mt-3">Only exception: Technical crash reports that Apple optionally forwards to developers via iOS system settings (Apple Crashlytics). Please refer to Apple's privacy policy: <a href="https://www.apple.com/legal/privacy/de-ww/" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-light transition-colors underline underline-offset-2">apple.com/legal/privacy</a></p>
+          <p class="mt-3 p-3 rounded-md bg-accent/50 border border-border font-mono text-xs tracking-wider uppercase text-foreground">No tracking. No subscription account. No cloud sync.</p>
+        </section>
+
+        <section>
+          <h2 class="font-display text-lg font-semibold text-foreground mb-2">6. Cookies and Cookie Consent</h2>
+
+          <h3 class="font-display text-base font-medium text-foreground mt-4 mb-2">Technically Necessary Cookies</h3>
+          <p>We use a technically necessary cookie for storing your theme choice (light/dark mode) and language selection. This cookie contains no personal data, is stored on your device, and does not require consent.</p>
+
+          <h3 class="font-display text-base font-medium text-foreground mt-4 mb-2">Analytics Cookies (Google Analytics 4)</h3>
+          <p><strong class="text-foreground">Only with your explicit consent</strong> do we use Google Analytics 4 (GA4), a web analytics service by Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA.</p>
+          <p class="mt-3"><strong class="text-foreground">Purpose:</strong> Improving the offering, understanding usage.</p>
+          <p class="mt-1"><strong class="text-foreground">Legal basis:</strong> Your consent (cookie banner).</p>
+          <p class="mt-1"><strong class="text-foreground">Revocation:</strong> At any time via the cookie banner or by email to <a href="mailto:privacy@audhd-flow.ch" class="text-primary hover:text-primary-light transition-colors underline underline-offset-2">privacy@audhd-flow.ch</a></p>
+
+          <h3 class="font-display text-base font-medium text-foreground mt-4 mb-2">Fully Disable GA4</h3>
+          <p>Via the Google browser plugin: <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-light transition-colors underline underline-offset-2">tools.google.com/dlpage/gaoptout</a></p>
+        </section>
+
+        <section>
+          <h2 class="font-display text-lg font-semibold text-foreground mb-2">7. SSL/TLS Encryption</h2>
+          <p>audhd-flow.ch uses HTTPS with TLS encryption throughout. The lock symbol in the address bar confirms the encrypted connection. Data you transmit to us cannot be read by third parties.</p>
+        </section>
+
+        <section>
+          <h2 class="font-display text-lg font-semibold text-foreground mb-2">8. Data Transfers to Third Parties</h2>
+          <p class="mb-3">We generally do not share your data. Exceptions:</p>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm border border-border rounded-md">
+              <thead>
+                <tr class="bg-accent/50">
+                  <th class="text-left p-2 border-b border-border text-foreground font-medium">Recipient</th>
+                  <th class="text-left p-2 border-b border-border text-foreground font-medium">Purpose</th>
+                  <th class="text-left p-2 border-b border-border text-foreground font-medium">Location</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="p-2 border-b border-border">Google LLC (GA4)</td>
+                  <td class="p-2 border-b border-border">Web analytics (only with consent)</td>
+                  <td class="p-2 border-b border-border">USA (DPF certified)</td>
+                </tr>
+                <tr>
+                  <td class="p-2 border-b border-border">Apple Inc.</td>
+                  <td class="p-2 border-b border-border">App Store Distribution</td>
+                  <td class="p-2 border-b border-border">USA (DPF certified)</td>
+                </tr>
+                <tr>
+                  <td class="p-2">Netlify Inc.</td>
+                  <td class="p-2">Web hosting & Forms</td>
+                  <td class="p-2">USA (SCCs)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="font-display text-lg font-semibold text-foreground mb-2">9. Retention Periods</h2>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm border border-border rounded-md">
+              <thead>
+                <tr class="bg-accent/50">
+                  <th class="text-left p-2 border-b border-border text-foreground font-medium">Data Type</th>
+                  <th class="text-left p-2 border-b border-border text-foreground font-medium">Retention Period</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="p-2 border-b border-border">Server log files</td><td class="p-2 border-b border-border">30 days</td></tr>
+                <tr><td class="p-2 border-b border-border">Waitlist emails</td><td class="p-2 border-b border-border">Until notification or revocation</td></tr>
+                <tr><td class="p-2 border-b border-border">GA4 data</td><td class="p-2 border-b border-border">14 months (GA4 default, shortened)</td></tr>
+                <tr><td class="p-2">Business correspondence</td><td class="p-2">10 years (legal obligation, CO)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="font-display text-lg font-semibold text-foreground mb-2">10. Your Rights Under FADP</h2>
+          <ul class="space-y-3">
+            <li><strong class="text-foreground">Access (Art. 25 FADP):</strong> You can request information about your stored data at any time, free of charge.</li>
+            <li><strong class="text-foreground">Rectification (Art. 32 FADP):</strong> We will correct inaccurate data upon request.</li>
+            <li><strong class="text-foreground">Deletion (Art. 32 FADP):</strong> You can request deletion of your data, provided no legal retention obligations apply.</li>
+            <li><strong class="text-foreground">Restriction of processing:</strong> You can request that we restrict the processing of your data.</li>
+            <li><strong class="text-foreground">Data portability:</strong> Where technically feasible, you will receive your data in a machine-readable format.</li>
+            <li><strong class="text-foreground">Withdrawal of consent:</strong> Any consent given can be revoked at any time with future effect.</li>
+            <li><strong class="text-foreground">Complaint:</strong> You have the right to file a complaint with the FDPIC: <a href="https://www.edoeb.admin.ch" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-light transition-colors underline underline-offset-2">edoeb.admin.ch</a></li>
+          </ul>
+          <p class="mt-4">For all inquiries: <a href="mailto:privacy@audhd-flow.ch" class="text-primary hover:text-primary-light transition-colors underline underline-offset-2">privacy@audhd-flow.ch</a></p>
+          <p class="mt-1">We will process your request within 30 days.</p>
+        </section>
+
+        <section>
+          <h2 class="font-display text-lg font-semibold text-foreground mb-2">11. Objection to Advertising Emails</h2>
+          <p>The use of contact data published in the legal notice for sending unsolicited advertising is hereby expressly objected to. We reserve the right to take legal action against unsolicited mailings (spam).</p>
+        </section>
+
+        <section>
+          <h2 class="font-display text-lg font-semibold text-foreground mb-2">12. Changes to This Policy</h2>
+          <p>We update this privacy policy as needed. The current version always applies.</p>
+        </section>
+
+        <footer class="pt-6 border-t border-border">
+          <p class="font-mono text-xs tracking-wider uppercase text-muted-foreground">
+            Chur, February 2026<br />
+            Markenkern AG – AuDHD-Flow
+          </p>
+        </footer>
+      </div>
+    </div>
+  </main>
+  <Footer lang={lang} global={globalData} />
+</BaseLayout>

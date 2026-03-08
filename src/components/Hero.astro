@@ -1,0 +1,62 @@
+---
+interface Props {
+  data: {
+    eyebrow: string;
+    headlineLine1: string;
+    headlinePrimary: string;
+    headlineLine3: string;
+    subheadline: string;
+    ctaPrimary: string;
+    ctaSecondary: string;
+  };
+}
+
+const { data } = Astro.props;
+---
+
+<section class="min-h-svh flex flex-col justify-center relative pt-20 overflow-hidden">
+  <!-- Background glow -->
+  <div class="absolute top-[20%] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,hsl(var(--primary-glow)),transparent_70%)] pointer-events-none"></div>
+
+  <div class="max-w-wide mx-auto px-8 w-full">
+    <div class="grid grid-cols-1 gap-16 items-center">
+      <div>
+        <div class="reveal mb-8 flex items-center gap-3">
+          <span class="block w-6 h-px bg-primary"></span>
+          <span class="font-mono text-[0.6875rem] tracking-[0.2em] uppercase text-primary">
+            {data.eyebrow}
+          </span>
+        </div>
+
+        <h1 class="reveal reveal-delay-1 font-display text-[clamp(2.5rem,6vw,4.5rem)] font-extrabold tracking-tight leading-[1.05] text-foreground mb-6">
+          {data.headlineLine1}
+          <br />
+          <span class="text-primary-light">{data.headlinePrimary}</span>
+          <br />
+          {data.headlineLine3}
+        </h1>
+
+        <p class="reveal reveal-delay-2 text-lg text-text2 max-w-[480px] leading-[1.7] font-light mb-10">
+          {data.subheadline}
+        </p>
+
+        <div class="reveal reveal-delay-3 flex items-center gap-4 flex-wrap">
+          <a
+            href="#download"
+            class="inline-flex items-center gap-2.5 bg-primary text-primary-foreground px-7 py-3.5 rounded-md font-mono text-[0.8125rem] tracking-[0.1em] uppercase no-underline transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_32px_hsl(var(--primary)/0.35)]"
+          >
+            {data.ctaPrimary}
+          </a>
+
+          <a
+            href="#science"
+            class="inline-flex items-center gap-2.5 bg-transparent text-text2 px-6 py-3.5 border border-border rounded-md font-mono text-[0.8125rem] tracking-[0.1em] uppercase no-underline transition-all hover:border-teal-border hover:text-primary-light"
+          >
+            {data.ctaSecondary}
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
