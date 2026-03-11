@@ -23,6 +23,8 @@ const text = {
 };
 
 const t = text[lang];
+const imgLight = `/images/screenshot-${lang}-light.png`;
+const imgDark = `/images/screenshot-${lang}-dark.png`;
 ---
 
 <section class="py-28 overflow-hidden">
@@ -44,12 +46,12 @@ const t = text[lang];
       <div class="flex flex-col items-center gap-4">
         <div class="iphone-frame iphone-frame--light">
           <img
-            src="/images/screenshot-light.png"
+            src={imgLight}
             alt={`AuDHD-Flow App – ${t.captionLight}`}
             class="iphone-screen"
             loading="lazy"
-            width="280"
-            height="607"
+            width="560"
+            height="1214"
           />
         </div>
         <span class="font-mono text-[0.625rem] tracking-[0.15em] uppercase text-text3">{t.captionLight}</span>
@@ -59,12 +61,12 @@ const t = text[lang];
       <div class="flex flex-col items-center gap-4">
         <div class="iphone-frame iphone-frame--dark">
           <img
-            src="/images/screenshot-dark.png"
+            src={imgDark}
             alt={`AuDHD-Flow App – ${t.captionDark}`}
             class="iphone-screen"
             loading="lazy"
-            width="280"
-            height="607"
+            width="560"
+            height="1214"
           />
         </div>
         <span class="font-mono text-[0.625rem] tracking-[0.15em] uppercase text-text3">{t.captionDark}</span>
