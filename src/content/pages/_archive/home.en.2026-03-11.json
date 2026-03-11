@@ -28,48 +28,48 @@
         "color": "grey", "dotColor": "#888",
         "badge": "Shield",
         "name": "BASIS",
-        "hz": "Frequency-based masking",
-        "desc": "Noise with the mathematical structure of natural sounds. Masks ambient noise – your brain stops scanning the environment. Acoustic immune system.",
+        "hz": "Pink Noise · 12 Hz",
+        "desc": "Pink noise with the mathematical structure of natural sounds. Masks ambient noise – your brain stops scanning the environment. Acoustic immune system.",
         "wide": false
       },
       {
         "color": "blue", "dotColor": "#5B9BD5",
         "badge": "Drive",
         "name": "FOKUS",
-        "hz": "Activating frequency pattern",
-        "desc": "Binaural stimulation in the attention range. Like glasses for the frontal lobe. For admin, email, complex tasks.",
+        "hz": "Beta · 20 Hz",
+        "desc": "Binaural beat in beta range. Like glasses for the frontal lobe. For admin, email, complex tasks.",
         "wide": false
       },
       {
         "color": "teal", "dotColor": "hsl(184, 100%, 27%)",
         "badge": "Balance",
         "name": "RUHE",
-        "hz": "Calming frequency pattern",
-        "desc": "Entrainment for relaxed alertness. Between focus and rest – ideal for creative work.",
+        "hz": "Alpha · 10 Hz",
+        "desc": "Alpha entrainment for relaxed alertness. Between focus and rest – ideal for creative work.",
         "wide": false
       },
       {
         "color": "green", "dotColor": "hsl(155, 41%, 39%)",
         "badge": "Depth",
         "name": "MEDITATION",
-        "hz": "Deep relaxation",
-        "desc": "Frequency induction for deep relaxation. Anxiety relief and transition to quieter states of consciousness.",
+        "hz": "Theta · 6 Hz",
+        "desc": "Theta induction for deep relaxation. Anxiety relief and transition to quieter states of consciousness.",
         "wide": false
       },
       {
         "color": "brown", "dotColor": "#8B6A50",
         "badge": "Transition",
         "name": "ABEND",
-        "hz": "Sleep transition",
-        "desc": "Low-frequency stimulation for the transition to sleep. Gently powering down the nervous system.",
+        "hz": "Delta · 2 Hz",
+        "desc": "Delta frequencies for the transition to sleep. Gently powering down the nervous system.",
         "wide": false
       },
       {
         "color": "rose", "dotColor": "#C46A8A",
         "badge": "Emergency Anchor",
         "name": "SAFE SPACE",
-        "hz": "Heartbeat · Brown Noise · Vagal Anchor",
-        "desc": "The emergency button. Brown noise + synchronised heartbeat with vagus nerve activation. When everything becomes too much, this mode physiologically slows your nervous system. Radical stillness – no surprises.",
+        "hz": "Heartbeat · Theta · 6 Hz · Brown Noise",
+        "desc": "The emergency button. Brown noise + heartbeat at 58 BPM (vagus nerve stimulation). When everything becomes too much, this mode mechanically slows your pulse. Radical stillness – no surprises.",
         "wide": true
       }
     ]
@@ -92,7 +92,7 @@
       {
         "num": "03",
         "title": "Lossless Audio",
-        "body": "The neurodivergent brain unconsciously registers MP3 compression artefacts as stress. AuDHD-Flow generates mathematically pure sine waves natively in real time – directly on the device."
+        "body": "The neurodivergent brain unconsciously registers MP3 compression artefacts as stress. AuDHD-Flow generates mathematically pure sine waves in real time via Web Audio API."
       }
     ],
     "paradox": {
@@ -103,7 +103,7 @@
       "asdPole": "ASD-Pole",
       "asdNeed": "Stillness / Safety",
       "solution": "AuDHD-Flow – Both poles united",
-      "solutionDesc": "Adaptive stimulation + seamless sound loops + vagal heartbeat synchronisation"
+      "solutionDesc": "LFO modulation (stimulation) + Gapless looping (stillness) + 58 BPM heartbeat (vagal)"
     }
   },
   "techNote": {
@@ -116,7 +116,7 @@
       {
         "icon": "〜",
         "title": "Lossless Audio",
-        "desc": "No MP3. Native real-time oscillators directly on the device. Mathematically pure sine waves – zero compression artefacts."
+        "desc": "No MP3. Real-time oscillators via Web Audio API. Mathematically pure sine waves – zero compression artefacts."
       },
       {
         "icon": "◯",
@@ -128,7 +128,7 @@
   "download": {
     "eyebrow": "Get started",
     "headline": "Headphones in.\nChoose mode.\nLet go.",
-    "subheadline": "AuDHD-Flow is in final testing. Free to start – Premium from €8/month. Sign up and be the first to know when the app launches.",
+    "subheadline": "AuDHD-Flow is in development. Sign up and be the first to know when the app is available – for iOS and Android.",
     "waitlistLabel": "Waitlist – iOS & Android",
     "emailPlaceholder": "Email address",
     "submitLabel": "Sign up",
