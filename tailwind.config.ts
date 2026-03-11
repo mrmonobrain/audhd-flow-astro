@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["DM Sans", "sans-serif"],
-        body: ["DM Sans", "sans-serif"],
+        display: ["Euclid Circular A", "DM Sans", "sans-serif"],
+        body: ["Euclid Circular A", "DM Sans", "sans-serif"],
         mono: ["DM Mono", "monospace"],
       },
       maxWidth: {
