@@ -23,12 +23,13 @@ const altPath = Astro.url.pathname.replace(`/${lang}`, `/${altLang}`);
 <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-5 border-b border-border bg-[hsl(var(--nav-bg))] backdrop-blur-xl backdrop-saturate-[180%]">
   <a href={`${prefix}/`} class="flex items-center gap-3 no-underline">
     <img src="/images/logo-audhd_flow-circle.png" alt="AuDHD-Flow" class="w-7 h-7 rounded-sm" loading="eager" />
-    <span class="font-bold tracking-[0.15em] uppercase text-[1.0625rem]" style="font-family: Menlo, Monaco, 'Courier New', monospace; color: #1a3c34;">
+    <span class="font-bold tracking-[0.15em] uppercase text-[1.0625rem] text-foreground" style="font-family: Menlo, Monaco, 'Courier New', monospace;">
       AuDHD-Flow
     </span>
   </a>
 
   <div class="flex items-center gap-4">
+    <!-- Desktop nav -->
     <ul class="hidden md:flex items-center gap-8 list-none m-0 p-0">
       <li>
         <a href="#modes" class="font-mono text-xs tracking-[0.12em] uppercase text-text2 hover:text-primary-light transition-colors no-underline">
@@ -73,14 +74,80 @@ const altPath = Astro.url.pathname.replace(`/${lang}`, `/${altLang}`);
       aria-label="Toggle dark mode"
       class="flex items-center justify-center w-[34px] h-[34px] bg-surface2 border border-border rounded-md cursor-pointer text-text2 hover:border-teal-border hover:text-primary transition-all"
     >
-      <!-- Sun icon (shown in dark mode) -->
       <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden dark:block" aria-hidden="true">
         <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
       </svg>
-      <!-- Moon icon (shown in light mode) -->
       <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="block dark:hidden" aria-hidden="true">
         <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
       </svg>
     </button>
+
+    <!-- Mobile hamburger -->
+    <button
+      id="mobile-menu-toggle"
+      aria-label="Menu"
+      aria-expanded="false"
+      class="flex md:hidden items-center justify-center w-[34px] h-[34px] bg-surface2 border border-border rounded-md cursor-pointer text-text2 hover:border-teal-border hover:text-primary transition-all"
+    >
+      <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+      <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
   </div>
 </nav>
+
+<!-- Mobile menu overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-40 hidden">
+  <div class="absolute inset-0 bg-background/95 backdrop-blur-lg"></div>
+  <div class="relative flex flex-col items-center justify-center h-full gap-10 pt-20">
+    <a href="#modes" class="mobile-nav-link font-mono text-sm tracking-[0.15em] uppercase text-text2 hover:text-primary-light transition-colors no-underline">
+      {lang === 'de' ? n.linkModesDe : n.linkModesEn}
+    </a>
+    <a href="#science" class="mobile-nav-link font-mono text-sm tracking-[0.15em] uppercase text-text2 hover:text-primary-light transition-colors no-underline">
+      {lang === 'de' ? n.linkScienceDe : n.linkScienceEn}
+    </a>
+    <a href="#download" class="mobile-nav-link font-mono text-sm tracking-[0.15em] uppercase text-text2 hover:text-primary-light transition-colors no-underline">
+      {lang === 'de' ? n.linkSignupDe : n.linkSignupEn}
+    </a>
+  </div>
+</div>
+
+<script is:inline>
+  (function() {
+    var toggle = document.getElementById('mobile-menu-toggle');
+    var menu = document.getElementById('mobile-menu');
+    var iconMenu = document.getElementById('icon-menu');
+    var iconClose = document.getElementById('icon-close');
+    var links = menu ? menu.querySelectorAll('.mobile-nav-link') : [];
+
+    function closeMenu() {
+      menu.classList.add('hidden');
+      iconMenu.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    if (toggle && menu) {
+      toggle.addEventListener('click', function() {
+        var isOpen = !menu.classList.contains('hidden');
+        if (isOpen) {
+          closeMenu();
+        } else {
+          menu.classList.remove('hidden');
+          iconMenu.classList.add('hidden');
+          iconClose.classList.remove('hidden');
+          toggle.setAttribute('aria-expanded', 'true');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+
+      links.forEach(function(link) {
+        link.addEventListener('click', closeMenu);
+      });
+    }
+  })();
+</script>

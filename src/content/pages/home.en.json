@@ -12,12 +12,12 @@
     "eyebrow": "The Problem",
     "headline": "The open filter",
     "body1": "The neurodivergent brain has no automatic gate between stimulus and perception. Sound, light, thoughts – everything arrives simultaneously and unfiltered.",
-    "body2": "The result: you filter consciously. That costs massive energy. By afternoon your mental battery is empty – not from work, but from the heavy labour of sensory processing.",
+    "body2": "The result: you filter consciously. That costs enormous energy. By afternoon your mental battery is empty – not from work, but from the sheer effort of sensory processing.",
     "quote": "\"Instead of cognitive compensation, AuDHD-Flow provides physiological relief – bottom-up instead of top-down.\"",
     "stats": [
-      { "number": "3–5%", "text": "of the population with combined AuDHD profile – barely addressed." },
-      { "number": "×4", "text": "increased sensory processing load compared to neurotypical individuals." },
-      { "number": "0", "text": "apps on the market addressing ADHD stimulation AND autism predictability simultaneously." }
+      { "number": "3–5 %", "text": "of the population have a combined AuDHD profile. Almost no solution addresses both sides." },
+      { "number": "×4", "text": "higher sensory processing load compared to neurotypical individuals." },
+      { "number": "0", "text": "apps on the market addressing ADHD stimulation and autism predictability simultaneously." }
     ]
   },
   "modes": {
@@ -29,7 +29,7 @@
         "badge": "Shield",
         "name": "BASIS",
         "hz": "Frequency-based masking",
-        "desc": "Noise with the mathematical structure of natural sounds. Masks ambient noise – your brain stops scanning the environment. Acoustic immune system.",
+        "desc": "Noise with the mathematical structure of natural sounds. Masks ambient noise so your brain can stop scanning the environment. Your acoustic immune system.",
         "wide": false
       },
       {
@@ -37,7 +37,7 @@
         "badge": "Drive",
         "name": "FOKUS",
         "hz": "Activating frequency pattern",
-        "desc": "Binaural stimulation in the attention range. Like glasses for the frontal lobe. For admin, email, complex tasks.",
+        "desc": "Binaural stimulation in the attention range. Like glasses for the frontal lobe – for admin, emails, and complex tasks.",
         "wide": false
       },
       {
@@ -45,7 +45,7 @@
         "badge": "Balance",
         "name": "RUHE",
         "hz": "Calming frequency pattern",
-        "desc": "Entrainment for relaxed alertness. Between focus and rest – ideal for creative work.",
+        "desc": "Your brain synchronises to a calmer rhythm. Between focus and rest – ideal for creative work.",
         "wide": false
       },
       {
@@ -53,7 +53,7 @@
         "badge": "Depth",
         "name": "MEDITATION",
         "hz": "Deep relaxation",
-        "desc": "Frequency induction for deep relaxation. Anxiety relief and transition to quieter states of consciousness.",
+        "desc": "Targeted frequency stimulation for deep relaxation. Releases tension and guides the transition into quieter states of consciousness.",
         "wide": false
       },
       {
@@ -61,67 +61,67 @@
         "badge": "Transition",
         "name": "ABEND",
         "hz": "Sleep transition",
-        "desc": "Low-frequency stimulation for the transition to sleep. Gently powering down the nervous system.",
+        "desc": "Gentle frequency stimulation for the transition to sleep. The nervous system is carefully powered down.",
         "wide": false
       },
       {
         "color": "rose", "dotColor": "#C46A8A",
         "badge": "Emergency Anchor",
         "name": "SAFE SPACE",
-        "hz": "Heartbeat · Brown Noise · Vagal Anchor",
-        "desc": "The emergency button. Brown noise + synchronised heartbeat with vagus nerve activation. When everything becomes too much, this mode physiologically slows your nervous system. Radical stillness – no surprises.",
-        "wide": true
+        "hz": "Heartbeat · Brown Noise · Vagus Nerve Anchor",
+        "desc": "The emergency button. Brown noise combined with synchronised heartbeat and vagus nerve activation. When everything becomes too much, this mode physiologically slows your nervous system. Radical predictability – no surprises.",
+        "wide": false
       }
     ]
   },
   "science": {
     "eyebrow": "Science",
-    "headline": "The physics\nbehind it",
-    "readMoreLink": "Read full indication",
+    "headline": "The principles\nbehind it",
+    "readMoreLink": "",
     "principles": [
       {
         "num": "01",
         "title": "Stochastic Resonance",
-        "body": "Moderate background noise significantly improves cognitive performance at low dopaminergic activity – by raising the signal threshold. (Sikström et al.)"
+        "body": "Moderate background noise significantly improves cognitive performance at low dopaminergic activity – by raising the signal threshold. (Sikström & Söderlund, 2007)"
       },
       {
         "num": "02",
         "title": "Brainwave Entrainment",
-        "body": "The brain synchronises to rhythmic external stimuli (frequency following response). EEG studies confirm inducibility of beta, alpha and theta waves. (Huang & Charyton)"
+        "body": "The brain synchronises to rhythmic external stimuli – known as the frequency following response. EEG studies confirm that brainwaves can be guided into specific frequency ranges. (Huang & Charyton, 2008)"
       },
       {
         "num": "03",
-        "title": "Lossless Audio",
-        "body": "The neurodivergent brain unconsciously registers MP3 compression artefacts as stress. AuDHD-Flow generates mathematically pure sine waves natively in real time – directly on the device."
+        "title": "Lossless Sound Generation",
+        "body": "The neurodivergent brain unconsciously registers compression artefacts from MP3 files as stress signals. AuDHD-Flow generates mathematically pure sine waves natively in real time – directly on the device, without compressed files."
       }
     ],
     "paradox": {
       "title": "The AuDHD Paradox",
       "subtitle": "Two opposing needs – one architecture.",
-      "adhdPole": "ADHD-Pole",
+      "adhdPole": "ADHD Pole",
       "adhdNeed": "Stimulation",
-      "asdPole": "ASD-Pole",
-      "asdNeed": "Stillness / Safety",
+      "asdPole": "ASD Pole",
+      "asdNeed": "Predictability",
       "solution": "AuDHD-Flow – Both poles united",
-      "solutionDesc": "Adaptive stimulation + seamless sound loops + vagal heartbeat synchronisation"
+      "solutionDesc": "Adaptive stimulation + seamless sound loops + heartbeat synchronisation via the vagus nerve"
     }
   },
   "techNote": {
     "items": [
       {
         "icon": "🎧",
-        "title": "Headphones Required",
-        "desc": "Only in-ear or noise-cancelling creates the closed acoustic space required for binaural effect."
+        "title": "Headphones required",
+        "desc": "Only in-ear or noise-cancelling headphones create the closed acoustic space the binaural effect needs."
       },
       {
         "icon": "〜",
-        "title": "Lossless Audio",
-        "desc": "No MP3. Native real-time oscillators directly on the device. Mathematically pure sine waves – zero compression artefacts."
+        "title": "Lossless sound",
+        "desc": "No MP3. Native real-time oscillators generate sound directly on the device. Mathematically pure sine waves – zero compression artefacts."
       },
       {
         "icon": "◯",
-        "title": "No Tracking",
-        "desc": "No analytics, no forced subscription, no third-party data. The app works completely offline."
+        "title": "No tracking",
+        "desc": "No analytics, no forced subscription, no third-party data. The app works entirely offline."
       }
     ]
   },

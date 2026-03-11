@@ -1,0 +1,108 @@
+---
+interface Props {
+  lang: 'de' | 'en';
+}
+
+const { lang } = Astro.props;
+
+const text = {
+  de: {
+    eyebrow: "So sieht es aus",
+    headline: "Klarheit auf einen Blick",
+    sub: "Sechs Modi, ein Interface. Kein Scrollen, keine Menüs – wähle deinen Zustand und die App übernimmt.",
+    captionLight: "Light Mode",
+    captionDark: "Dark Mode",
+  },
+  en: {
+    eyebrow: "What it looks like",
+    headline: "Clarity at a glance",
+    sub: "Six modes, one interface. No scrolling, no menus – choose your state and the app takes over.",
+    captionLight: "Light Mode",
+    captionDark: "Dark Mode",
+  }
+};
+
+const t = text[lang];
+---
+
+<section class="py-28 overflow-hidden">
+  <div class="max-w-wide mx-auto px-8">
+    <div class="text-center mb-16">
+      <span class="reveal font-mono text-[0.6875rem] tracking-[0.2em] uppercase text-primary block mb-4">
+        {t.eyebrow}
+      </span>
+      <h2 class="reveal reveal-delay-1 font-display text-[clamp(1.75rem,4vw,2.75rem)] font-bold tracking-tight leading-[1.15] text-foreground mb-4">
+        {t.headline}
+      </h2>
+      <p class="reveal reveal-delay-2 text-lg text-text2 font-light max-w-[520px] mx-auto leading-[1.7]">
+        {t.sub}
+      </p>
+    </div>
+
+    <div class="reveal reveal-delay-3 flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12">
+      <!-- Light mode screenshot -->
+      <div class="flex flex-col items-center gap-4">
+        <div class="iphone-frame iphone-frame--light">
+          <img
+            src="/images/screenshot-light.png"
+            alt={`AuDHD-Flow App – ${t.captionLight}`}
+            class="iphone-screen"
+            loading="lazy"
+            width="280"
+            height="607"
+          />
+        </div>
+        <span class="font-mono text-[0.625rem] tracking-[0.15em] uppercase text-text3">{t.captionLight}</span>
+      </div>
+
+      <!-- Dark mode screenshot -->
+      <div class="flex flex-col items-center gap-4">
+        <div class="iphone-frame iphone-frame--dark">
+          <img
+            src="/images/screenshot-dark.png"
+            alt={`AuDHD-Flow App – ${t.captionDark}`}
+            class="iphone-screen"
+            loading="lazy"
+            width="280"
+            height="607"
+          />
+        </div>
+        <span class="font-mono text-[0.625rem] tracking-[0.15em] uppercase text-text3">{t.captionDark}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .iphone-frame {
+    position: relative;
+    width: 280px;
+    border-radius: 40px;
+    padding: 12px;
+    box-shadow:
+      0 25px 50px -12px rgba(0, 0, 0, 0.15),
+      0 0 0 1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  .iphone-frame:hover {
+    transform: translateY(-4px);
+  }
+  .iphone-frame--light {
+    background: #e8e8e8;
+  }
+  .iphone-frame--dark {
+    background: #1a1a1a;
+  }
+  .iphone-screen {
+    width: 100%;
+    height: auto;
+    border-radius: 28px;
+    display: block;
+  }
+
+  @media (max-width: 639px) {
+    .iphone-frame {
+      width: 240px;
+    }
+  }
+</style>

@@ -5,6 +5,7 @@ import Hero from '../../components/Hero.astro';
 import ProblemSection from '../../components/ProblemSection.astro';
 import ModesSection from '../../components/ModesSection.astro';
 import ScienceSection from '../../components/ScienceSection.astro';
+import AppShowcase from '../../components/AppShowcase.astro';
 import TechNote from '../../components/TechNote.astro';
 import DownloadSection from '../../components/DownloadSection.astro';
 import Footer from '../../components/Footer.astro';
@@ -28,6 +29,7 @@ const lang = 'de';
     <Hero data={homeData.hero} />
     <ProblemSection data={homeData.problem} />
     <ModesSection data={homeData.modes} />
+    <AppShowcase lang={lang} />
     <ScienceSection data={homeData.science} />
     <TechNote data={homeData.techNote} />
     <DownloadSection lang={lang} data={homeData.download} />
