@@ -20,7 +20,7 @@
     var formData = new FormData(form);
     var encoded = new URLSearchParams(formData).toString();
 
-    fetch('/', {
+    fetch(window.location.pathname, {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encoded,
