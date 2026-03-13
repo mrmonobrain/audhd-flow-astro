@@ -40,7 +40,7 @@ const { data, lang = 'de' } = Astro.props;
     <!-- Accordion -->
     <div class="faq-list reveal reveal-delay-2 border-t border-border">
       {data.items.map((item, i) => (
-        <details class="faq-item border-b border-border">
+        <details class="faq-item border-b border-border pl-6">
 
           <summary class="faq-summary relative flex items-start justify-between gap-6 py-6 cursor-pointer list-none select-none">
             <!-- Hover underline sweep -->
@@ -286,6 +286,13 @@ const { data, lang = 'de' } = Astro.props;
               body.addEventListener('transitionend', function h() {
                 body.style.maxHeight = 'none';
                 body.removeEventListener('transitionend', h);
+
+                /* Scroll gesamte Antwort in den sichtbaren Bereich */
+                var rect = details.getBoundingClientRect();
+                var headerH = 80; /* Navbar-Höhe */
+                if (rect.top < headerH || rect.bottom > window.innerHeight) {
+                  details.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
               });
             });
           }
