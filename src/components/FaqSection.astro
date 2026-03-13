@@ -1,0 +1,198 @@
+---
+interface FaqBullet {
+  title: string;
+  body: string;
+}
+
+interface FaqItem {
+  q: string;
+  a: string;
+  bullets: FaqBullet[] | null;
+}
+
+interface Props {
+  data: {
+    eyebrow: string;
+    headline: string;
+    items: FaqItem[];
+  };
+  lang?: 'de' | 'en';
+}
+
+const { data, lang = 'de' } = Astro.props;
+---
+
+<section id="faq" class="bg-background border-b border-border py-24">
+  <div class="max-w-content mx-auto px-8">
+
+    <!-- Header -->
+    <div class="mb-12">
+      <span class="reveal font-mono text-[0.6875rem] tracking-[0.2em] uppercase text-primary block mb-5">
+        {data.eyebrow}
+      </span>
+      <h2 class="reveal reveal-delay-1 font-display text-[clamp(1.75rem,4vw,2.5rem)] font-bold tracking-tight leading-[1.15] text-foreground whitespace-pre-line">
+        {data.headline}
+      </h2>
+    </div>
+
+    <!-- Accordion -->
+    <div class="faq-list reveal reveal-delay-2 border-t border-border">
+      {data.items.map((item, i) => (
+        <details class="faq-item group border-b border-border">
+          <summary class="faq-summary flex items-start justify-between gap-6 py-6 cursor-pointer list-none select-none">
+            <span class="font-display text-[1rem] font-semibold text-foreground leading-snug flex-1 pr-2">
+              {item.q}
+            </span>
+            <span class="faq-icon flex-shrink-0 mt-0.5 w-5 h-5 rounded-full border border-border flex items-center justify-center transition-transform duration-300 text-primary">
+              <svg class="faq-plus w-3 h-3 transition-all duration-300" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <line class="faq-hbar" x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </summary>
+
+          <!-- Animated body wrapper -->
+          <div class="faq-body overflow-hidden" style="max-height: 0;">
+            <div class="pb-6 pr-11">
+              <p class="text-[0.9375rem] text-text2 leading-relaxed">
+                {item.a}
+              </p>
+              {item.bullets && item.bullets.length > 0 && (
+                <ul class="mt-4 flex flex-col gap-3">
+                  {item.bullets.map((bullet) => (
+                    <li class="grid grid-cols-[auto_1fr] gap-3 items-start">
+                      <span class="mt-[0.35em] w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>
+                      <div>
+                        <span class="font-mono text-[0.75rem] tracking-[0.06em] text-foreground font-medium">
+                          {bullet.title}
+                        </span>
+                        <p class="text-[0.875rem] text-text2 leading-relaxed mt-0.5">
+                          {bullet.body}
+                        </p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </div>
+        </details>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ Schema.org JSON-LD for SEO -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": data.items.map(item => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a + (item.bullets ? ' ' + item.bullets.map(b => b.title + ': ' + b.body).join(' ') : '')
+    }
+  }))
+})} />
+
+<style>
+  /* Hide native marker in all browsers */
+  .faq-summary::-webkit-details-marker { display: none; }
+  .faq-summary::marker { display: none; }
+
+  /* Hover state on summary */
+  .faq-summary:hover .faq-icon {
+    border-color: hsl(var(--primary) / 0.5);
+    background-color: hsl(var(--primary) / 0.06);
+  }
+
+  /* Body transition */
+  .faq-body {
+    transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Rotate horizontal bar to 0° when open (making +  into −) */
+  .faq-item[open] .faq-hbar {
+    transform: scaleX(0);
+    transform-origin: center;
+    opacity: 0;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+  }
+  .faq-hbar {
+    transition: transform 0.25s ease, opacity 0.2s ease;
+  }
+
+  /* Summary line colour on open */
+  .faq-item[open] .faq-summary span:first-child {
+    color: hsl(var(--foreground));
+  }
+  .faq-item[open] .faq-icon {
+    border-color: hsl(var(--primary) / 0.6);
+    background-color: hsl(var(--primary) / 0.08);
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    function initFaq() {
+      const items = document.querySelectorAll('.faq-item');
+      items.forEach(function (details) {
+        const summary = details.querySelector('.faq-summary');
+        const body = details.querySelector('.faq-body');
+        if (!summary || !body) return;
+
+        summary.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          if (details.open) {
+            // Close: animate to 0
+            body.style.maxHeight = body.scrollHeight + 'px';
+            requestAnimationFrame(function () {
+              body.style.maxHeight = '0';
+              body.addEventListener('transitionend', function handler() {
+                details.removeAttribute('open');
+                body.removeEventListener('transitionend', handler);
+              });
+            });
+          } else {
+            // Open: animate to full height
+            // Close any other open item first
+            items.forEach(function (other) {
+              if (other !== details && other.open) {
+                const otherBody = other.querySelector('.faq-body');
+                if (otherBody) {
+                  otherBody.style.maxHeight = otherBody.scrollHeight + 'px';
+                  requestAnimationFrame(function () {
+                    otherBody.style.maxHeight = '0';
+                    otherBody.addEventListener('transitionend', function h() {
+                      other.removeAttribute('open');
+                      otherBody.removeEventListener('transitionend', h);
+                    });
+                  });
+                }
+              }
+            });
+
+            details.setAttribute('open', '');
+            body.style.maxHeight = '0';
+            requestAnimationFrame(function () {
+              body.style.maxHeight = body.scrollHeight + 'px';
+              body.addEventListener('transitionend', function handler() {
+                body.style.maxHeight = 'none';
+                body.removeEventListener('transitionend', handler);
+              });
+            });
+          }
+        });
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initFaq);
+    } else {
+      initFaq();
+    }
+  })();
+</script>

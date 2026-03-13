@@ -134,5 +134,63 @@
     "submitLabel": "Sign up",
     "successMessage": "Signed up – we'll let you know!",
     "errorMessage": "Something went wrong. Please try again."
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "headline": "Frequently Asked\nQuestions",
+    "items": [
+      {
+        "q": "How is AuDHD-Flow different from classic meditation or focus apps?",
+        "a": "Most apps are built as sessions – they demand your full attention for 15 or 30 minutes. AuDHD-Flow follows an uncompromising Wearable-First philosophy: it runs as a permanent acoustic companion via in-ear headphones in the background while you work or go about your day. No short-term kick – a cumulative effect. The steady, unobtrusive relief of your sensory filter means you have significantly more energy left at the end of the day.",
+        "bullets": null
+      },
+      {
+        "q": "Does the app replace my medication (e.g. Ritalin, Elvanse)?",
+        "a": "No. AuDHD-Flow works on the principle of physics vs. chemistry: medication intervenes chemically (top-down) in brain metabolism. The app uses physical sound waves for a bottom-up regulation of the nervous system. It perfectly complements medication – but does not replace it.",
+        "bullets": null
+      },
+      {
+        "q": "Why are there no settings, timers, or statistics in the app?",
+        "a": "For an AuDHD brain, every additional decision layer leads to energy loss. That's why AuDHD-Flow is built on uncompromising zero-choice design: no menus, no gamification pressure. You open the app, choose your state and it runs. No decision fatigue.",
+        "bullets": null
+      },
+      {
+        "q": "How do the sounds work technically?",
+        "a": "The audio engine uses precise, scientifically grounded frequencies, with a strict distinction between dynamic and static sounds:",
+        "bullets": [
+          {
+            "title": "Focus Mode",
+            "body": "A gentle, dynamic wave motion stimulates the ADHD component in the brain, keeps you alert and prevents habituation. Focus is a wave."
+          },
+          {
+            "title": "All other modes (Basis, Rest, Evening, Safe Space)",
+            "body": "Absolutely static, unchanging frequencies give the autistic part of the nervous system the maximum predictability and safety it needs. Safe Space is an anchor."
+          }
+        ]
+      },
+      {
+        "q": "Why not 40 Hz like on YouTube?",
+        "a": "40 Hz (gamma waves) can enhance performance for neurotypical brains. For an AuDHD brain, whose sensory filter is already running at full capacity, 40 Hz carries a significant risk of overload and overwhelm. AuDHD-Flow deliberately limits Focus Mode to safe beta frequencies – enough drive for focused work without pushing the system toward burnout.",
+        "bullets": null
+      },
+      {
+        "q": "When will I notice an effect?",
+        "a": "The effect doesn't kick in instantly like coffee – it builds systematically in three phases:",
+        "bullets": [
+          {
+            "title": "Immediately (Weeks 1–2) – Acoustic Shielding",
+            "body": "Your brain has to actively filter fewer stimuli. You notice that you're thrown off less often."
+          },
+          {
+            "title": "Mid-term (Weeks 2 – Month 3) – Neurological Conditioning",
+            "body": "Your nervous system links the frequencies to specific states. Switching between tasks costs significantly less effort to overcome."
+          },
+          {
+            "title": "Long-term (from Month 3) – Systemic Energy Savings",
+            "body": "The app is established as your external prefrontal cortex. In the evenings you experience significantly fewer crashes – and have real capacity left for your personal life."
+          }
+        ]
+      }
+    ]
   }
 }
