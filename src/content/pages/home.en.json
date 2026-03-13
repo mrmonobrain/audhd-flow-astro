@@ -141,16 +141,16 @@
     "items": [
       {
         "q": "How is AuDHD-Flow different from classic meditation or focus apps?",
-        "a": "Most apps are built as sessions – they demand your full attention for 15 or 30 minutes. AuDHD-Flow follows an uncompromising Wearable-First philosophy: it runs as a permanent acoustic companion via in-ear headphones in the background while you work or go about your day. No short-term kick – a cumulative effect. The steady, unobtrusive relief of your sensory filter means you have significantly more energy left at the end of the day.",
+        "a": "Most apps are built for active listening – they demand your full attention for 15 or 30 minutes. AuDHD-Flow follows an uncompromising Wearable-First philosophy: it runs as a permanent acoustic companion via in-ear headphones in the background while you work or go about your day. No short-term kick – a cumulative effect. The steady, unobtrusive relief of your sensory filter means you have significantly more energy left at the end of the day. We recommend in-ear headphones with transparency mode – so you can still communicate naturally with those around you.",
         "bullets": null
       },
       {
         "q": "Does the app replace my medication (e.g. Ritalin, Elvanse)?",
-        "a": "No. AuDHD-Flow works on the principle of physics vs. chemistry: medication intervenes chemically (top-down) in brain metabolism. The app uses physical sound waves for a bottom-up regulation of the nervous system. It perfectly complements medication – but does not replace it.",
+        "a": "No. AuDHD-Flow works on the principle of physics vs. chemistry: medication intervenes chemically (top-down) in brain metabolism. The app uses physical sound waves for a bottom-up regulation of the nervous system. It perfectly complements any existing medication – but does not replace it.",
         "bullets": null
       },
       {
-        "q": "Why are there no settings, timers, or statistics in the app?",
+        "q": "Why are there so few settings and statistics in the app?",
         "a": "For an AuDHD brain, every additional decision layer leads to energy loss. That's why AuDHD-Flow is built on uncompromising zero-choice design: no menus, no gamification pressure. You open the app, choose your state and it runs. No decision fatigue.",
         "bullets": null
       },
@@ -170,24 +170,35 @@
       },
       {
         "q": "Why not 40 Hz like on YouTube?",
-        "a": "40 Hz (gamma waves) can enhance performance for neurotypical brains. For an AuDHD brain, whose sensory filter is already running at full capacity, 40 Hz carries a significant risk of overload and overwhelm. AuDHD-Flow deliberately limits Focus Mode to safe beta frequencies – enough drive for focused work without pushing the system toward burnout.",
+        "a": "40 Hz (gamma waves) can enhance performance for neurotypical brains. For an AuDHD brain, whose sensory filter is already running at full capacity, 40 Hz carries a significant risk of overload and overwhelm. AuDHD-Flow deliberately limits Focus Mode to safe beta frequencies – enough drive for focused work without overloading the nervous system.",
         "bullets": null
       },
       {
-        "q": "When will I notice an effect?",
-        "a": "The effect doesn't kick in instantly like coffee – it builds systematically in three phases:",
+        "q": "How long should or can I use the app daily, and when will I notice an effect?",
+        "a": "Since AuDHD-Flow works physically rather than chemically, there is no overdose and no fixed minimum usage time. The entry point is very low-threshold:",
         "bullets": [
           {
-            "title": "Immediately (Weeks 1–2) – Acoustic Shielding",
-            "body": "Your brain has to actively filter fewer stimuli. You notice that you're thrown off less often."
+            "title": "Acute relief (from 15–20 minutes)",
+            "body": "You feel the first effect almost immediately. Once the app is running, your neurological sensory filter is physically shielded. Ideal for short focus sprints or winding down after a meeting."
           },
           {
-            "title": "Mid-term (Weeks 2 – Month 3) – Neurological Conditioning",
-            "body": "Your nervous system links the frequencies to specific states. Switching between tasks costs significantly less effort to overcome."
+            "title": "Cumulative protection (several hours)",
+            "body": "Unlike classic meditation apps, AuDHD-Flow can run continuously for several hours without issue. Many users run it as a permanent acoustic backdrop – for example in open-plan offices."
+          }
+        ],
+        "a2": "The long-term effect builds in three phases:",
+        "bullets2": [
+          {
+            "title": "Immediately (Day 1 – Week 2) – Acoustic Shielding",
+            "body": "You notice that you're thrown off less often. Your brain's unconscious scanning activity is dampened."
+          },
+          {
+            "title": "Mid-term (Week 2 – Month 3) – Neurological Conditioning",
+            "body": "Your nervous system links the frequencies firmly to states. The 'Mount Everest Syndrome' – where small tasks feel insurmountable – begins to ease."
           },
           {
             "title": "Long-term (from Month 3) – Systemic Energy Savings",
-            "body": "The app is established as your external prefrontal cortex. In the evenings you experience significantly fewer crashes – and have real capacity left for your personal life."
+            "body": "By consistently using bottom-up regulation throughout the day, you have significantly more capacity left in the evening – for yourself and your personal life."
           }
         ]
       }

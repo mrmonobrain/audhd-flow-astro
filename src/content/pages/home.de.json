@@ -141,16 +141,16 @@
     "items": [
       {
         "q": "Wie unterscheidet sich AuDHD-Flow von klassischen Meditations- oder Fokus-Apps?",
-        "a": "Die meisten Apps sind als Sessions konzipiert – sie fordern deine volle Aufmerksamkeit für 15 oder 30 Minuten. AuDHD-Flow folgt einer kompromisslosen Wearable-First-Philosophie: Es läuft als permanente akustische Begleitung über In-Ear-Kopfhörer im Hintergrund, während du arbeitest oder den Alltag bewältigst. Kein kurzfristiger Kick – sondern ein kumulativer Effekt. Die stetige, unaufdringliche Entlastung deines Reizfilters sorgt dafür, dass du am Ende des Tages deutlich mehr Energie übrig hast.",
+        "a": "Die meisten Apps sind für aktives Hören konzipiert – sie fordern deine volle Aufmerksamkeit für 15 oder 30 Minuten. AuDHD-Flow folgt einer kompromisslosen Wearable-First-Philosophie: Es läuft als permanente akustische Begleitung über In-Ear-Kopfhörer im Hintergrund, während du arbeitest oder den Alltag bewältigst. Kein kurzfristiger Kick – sondern ein kumulativer Effekt. Die stetige, unaufdringliche Entlastung deines Reizfilters sorgt dafür, dass du am Ende des Tages deutlich mehr Energie übrig hast. Wir empfehlen In-Ear-Kopfhörer mit Transparenzfunktion. So kannst du problemlos weiter mit deinem Umfeld kommunizieren.",
         "bullets": null
       },
       {
         "q": "Ersetzt die App meine Medikamente (z. B. Ritalin, Elvanse)?",
-        "a": "Nein. AuDHD-Flow arbeitet nach dem Prinzip Physik vs. Chemie: Medikamente greifen chemisch (Top-Down) in den Gehirnstoffwechsel ein. Die App nutzt physikalische Schallwellen für eine Bottom-Up-Regulation des Nervensystems. Sie ergänzt eine medikamentöse Therapie ideal – ersetzt sie aber nicht.",
+        "a": "Nein. AuDHD-Flow arbeitet nach dem Prinzip Physik vs. Chemie: Medikamente greifen chemisch (Top-Down) in den Gehirnstoffwechsel ein. Die App nutzt physikalische Schallwellen für eine Bottom-Up-Regulation des Nervensystems. Sie ergänzt eine allfällige medikamentöse Therapie ideal – ersetzt sie aber nicht.",
         "bullets": null
       },
       {
-        "q": "Warum gibt es in der App keine Einstellungen, Timer oder Statistiken?",
+        "q": "Warum gibt es in der App so wenige Einstellungsmöglichkeiten und Statistiken?",
         "a": "Bei einem AuDHD-Gehirn führt jede zusätzliche Entscheidungsebene zu Energieverlust. Deshalb setzt AuDHD-Flow auf kompromissloses Zero-Choice-Design: keine Menüs, kein Leistungsdruck durch Gamification. Du öffnest die App, wählst deinen Zustand und sie läuft. Keine Entscheidungsermüdung.",
         "bullets": null
       },
@@ -170,24 +170,35 @@
       },
       {
         "q": "Warum nicht 40 Hz wie auf YouTube?",
-        "a": "40 Hz (Gamma-Wellen) können für neurotypische Gehirne leistungssteigernd wirken. Für ein AuDHD-Gehirn, dessen Reizfilter ohnehin permanent auf Hochtouren läuft, birgt 40 Hz eine massive Gefahr von Overload und Überreizung. AuDHD-Flow limitiert den Fokus-Modus bewusst auf sichere Beta-Frequenzen – genug Antrieb für konzentrierte Arbeit, ohne das System in Richtung Burnout zu treiben.",
+        "a": "40 Hz (Gamma-Wellen) können für neurotypische Gehirne leistungssteigernd wirken. Für ein AuDHD-Gehirn, dessen Reizfilter ohnehin permanent auf Hochtouren läuft, birgt 40 Hz eine massive Gefahr von Overload und Überreizung. AuDHD-Flow limitiert den Fokus-Modus bewusst auf sichere Beta-Frequenzen – genug Antrieb für konzentrierte Arbeit, ohne das Nervensystem zu überfordern.",
         "bullets": null
       },
       {
-        "q": "Ab wann spüre ich eine Wirkung?",
-        "a": "Der Effekt baut sich nicht sofort auf wie ein Kaffee – er entwickelt sich systematisch in drei Phasen:",
+        "q": "Wie lange muss oder darf ich die App täglich nutzen und ab wann spüre ich eine Wirkung?",
+        "a": "Da AuDHD-Flow physikalisch und nicht chemisch wirkt, gibt es keine Überdosis und keine starre Mindestnutzungsdauer. Der Einstieg ist niederschwellig:",
         "bullets": [
           {
-            "title": "Sofort (Woche 1–2) – Akustische Abschirmung",
-            "body": "Dein Gehirn muss weniger Reize aktiv filtern. Du merkst, dass du seltener aus dem Konzept gebracht wirst."
+            "title": "Akute Entlastung (ab 15–20 Minuten)",
+            "body": "Du spürst den ersten Effekt fast sofort. Sobald die App läuft, wird dein neurologischer Reizfilter physikalisch abgeschirmt. Ideal für kurze Fokus-Sprints oder zum Herunterfahren nach einem Meeting."
+          },
+          {
+            "title": "Kumulativer Schutz (mehrere Stunden)",
+            "body": "AuDHD-Flow kann problemlos auch mehrere Stunden am Stück laufen – anders als klassische Meditations-Apps. Viele Nutzer setzen sie als permanente akustische Begleitung im Hintergrund ein, zum Beispiel im Grossraumbüro."
+          }
+        ],
+        "a2": "Der langfristige Effekt baut sich in drei Phasen auf:",
+        "bullets2": [
+          {
+            "title": "Sofort (Tag 1 – Woche 2) – Akustische Abschirmung",
+            "body": "Du merkst, dass du seltener aus dem Konzept gebracht wirst. Die unbewusste Scan-Aktivität deines Gehirns wird gedämpft."
           },
           {
             "title": "Mittelfristig (Woche 2 – Monat 3) – Neurologische Konditionierung",
-            "body": "Dein Nervensystem verknüpft die Frequenzen fest mit bestimmten Zuständen. Der Wechsel zwischen Aufgaben kostet deutlich weniger Überwindungsenergie."
+            "body": "Dein Nervensystem verknüpft die Frequenzen fest mit Zuständen. Das «Mount-Everest-Syndrom» – bei dem kleine Aufgaben unüberwindbar wirken – nimmt ab."
           },
           {
             "title": "Langfristig (ab Monat 3) – Systemische Energieeinsparung",
-            "body": "Die App ist als externer präfrontaler Kortex etabliert. Abends erlebst du deutlich weniger Crashes – und hast echte Kapazität für dein Privatleben übrig."
+            "body": "Weil du tagsüber konsequent auf Bottom-Up-Regulation gesetzt hast, hast du abends deutlich mehr Kapazität übrig – für dich und dein Privatleben."
           }
         ]
       }

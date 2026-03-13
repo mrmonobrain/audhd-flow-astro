@@ -8,6 +8,8 @@ interface FaqItem {
   q: string;
   a: string;
   bullets: FaqBullet[] | null;
+  a2?: string | null;
+  bullets2?: FaqBullet[] | null;
 }
 
 interface Props {
@@ -26,7 +28,7 @@ const { data, lang = 'de' } = Astro.props;
   <div class="max-w-content mx-auto px-8">
 
     <!-- Header -->
-    <div class="mb-12">
+    <div class="mb-14">
       <span class="reveal font-mono text-[0.6875rem] tracking-[0.2em] uppercase text-primary block mb-5">
         {data.eyebrow}
       </span>
@@ -38,35 +40,42 @@ const { data, lang = 'de' } = Astro.props;
     <!-- Accordion -->
     <div class="faq-list reveal reveal-delay-2 border-t border-border">
       {data.items.map((item, i) => (
-        <details class="faq-item group border-b border-border">
-          <summary class="faq-summary flex items-start justify-between gap-6 py-6 cursor-pointer list-none select-none">
-            <span class="font-display text-[1rem] font-semibold text-foreground leading-snug flex-1 pr-2">
+        <details class="faq-item border-b border-border">
+
+          <summary class="faq-summary relative flex items-start justify-between gap-6 py-6 cursor-pointer list-none select-none">
+            <!-- Hover underline sweep -->
+            <span class="faq-sweep"></span>
+            <span class="faq-q font-display text-[1.0625rem] font-semibold text-foreground leading-snug flex-1 pr-4 transition-colors duration-200">
               {item.q}
             </span>
-            <span class="faq-icon flex-shrink-0 mt-0.5 w-5 h-5 rounded-full border border-border flex items-center justify-center transition-transform duration-300 text-primary">
-              <svg class="faq-plus w-3 h-3 transition-all duration-300" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                <line class="faq-hbar" x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- Icon circle -->
+            <span class="faq-icon relative flex-shrink-0 mt-[0.15em] w-[1.375rem] h-[1.375rem] rounded-full border border-border flex items-center justify-center text-primary transition-all duration-250">
+              <svg class="w-[0.625rem] h-[0.625rem]" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="6" y1="1" x2="6" y2="11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                <line class="faq-hbar" x1="1" y1="6" x2="11" y2="6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
               </svg>
             </span>
           </summary>
 
-          <!-- Animated body wrapper -->
+          <!-- Max-height wrapper (JS-controlled) -->
           <div class="faq-body overflow-hidden" style="max-height: 0;">
-            <div class="pb-6 pr-11">
-              <p class="text-[0.9375rem] text-text2 leading-relaxed">
+            <!-- Inner: fade + slide -->
+            <div class="faq-inner pb-7 pr-12">
+
+              <p class="faq-answer-text text-[0.9375rem] text-text2 leading-7">
                 {item.a}
               </p>
+
               {item.bullets && item.bullets.length > 0 && (
-                <ul class="mt-4 flex flex-col gap-3">
-                  {item.bullets.map((bullet) => (
-                    <li class="grid grid-cols-[auto_1fr] gap-3 items-start">
-                      <span class="mt-[0.35em] w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>
+                <ul class="mt-5 flex flex-col gap-4">
+                  {item.bullets.map((bullet, bi) => (
+                    <li class="faq-bullet flex gap-4 items-start" style={`--bi: ${bi}`}>
+                      <span class="flex-shrink-0 mt-[0.4em] w-[2px] h-[1rem] rounded-full bg-primary opacity-60"></span>
                       <div>
-                        <span class="font-mono text-[0.75rem] tracking-[0.06em] text-foreground font-medium">
+                        <p class="text-[0.9375rem] font-semibold text-foreground leading-snug mb-1">
                           {bullet.title}
-                        </span>
-                        <p class="text-[0.875rem] text-text2 leading-relaxed mt-0.5">
+                        </p>
+                        <p class="text-[0.9375rem] text-text2 leading-7">
                           {bullet.body}
                         </p>
                       </div>
@@ -74,8 +83,34 @@ const { data, lang = 'de' } = Astro.props;
                   ))}
                 </ul>
               )}
+
+              {item.a2 && (
+                <p class="faq-bullet text-[0.9375rem] text-text2 leading-7 mt-6" style="--bi: 2">
+                  {item.a2}
+                </p>
+              )}
+
+              {item.bullets2 && item.bullets2.length > 0 && (
+                <ul class="mt-4 flex flex-col gap-4">
+                  {item.bullets2.map((bullet, bi) => (
+                    <li class="faq-bullet flex gap-4 items-start" style={`--bi: ${bi + 3}`}>
+                      <span class="flex-shrink-0 mt-[0.4em] w-[2px] h-[1rem] rounded-full bg-primary opacity-40"></span>
+                      <div>
+                        <p class="text-[0.9375rem] font-semibold text-foreground leading-snug mb-1">
+                          {bullet.title}
+                        </p>
+                        <p class="text-[0.9375rem] text-text2 leading-7">
+                          {bullet.body}
+                        </p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
             </div>
           </div>
+
         </details>
       ))}
     </div>
@@ -98,90 +133,159 @@ const { data, lang = 'de' } = Astro.props;
 })} />
 
 <style>
-  /* Hide native marker in all browsers */
+  /* ── Marker reset ── */
   .faq-summary::-webkit-details-marker { display: none; }
   .faq-summary::marker { display: none; }
 
-  /* Hover state on summary */
+  /* ── Hover sweep underline ── */
+  .faq-sweep {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 0;
+    background: hsl(var(--primary) / 0.25);
+    transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+  }
+  .faq-summary:hover .faq-sweep { width: 100%; }
+
+  /* ── Question text colour on hover ── */
+  .faq-summary:hover .faq-q { color: hsl(var(--foreground)); }
+
+  /* ── Icon: hover state ── */
   .faq-summary:hover .faq-icon {
-    border-color: hsl(var(--primary) / 0.5);
-    background-color: hsl(var(--primary) / 0.06);
+    border-color: hsl(var(--primary) / 0.45);
+    background-color: hsl(var(--primary) / 0.07);
+    color: hsl(var(--primary));
   }
 
-  /* Body transition */
-  .faq-body {
-    transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  /* ── Icon: open state ── */
+  .faq-item[open] .faq-icon {
+    border-color: hsl(var(--primary) / 0.55);
+    background-color: hsl(var(--primary) / 0.1);
+    color: hsl(var(--primary));
   }
 
-  /* Rotate horizontal bar to 0° when open (making +  into −) */
+  /* ── Horizontal bar morphs away on open ── */
+  .faq-hbar {
+    transform-origin: center;
+    transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.22s ease;
+  }
   .faq-item[open] .faq-hbar {
     transform: scaleX(0);
-    transform-origin: center;
     opacity: 0;
-    transition: transform 0.25s ease, opacity 0.2s ease;
-  }
-  .faq-hbar {
-    transition: transform 0.25s ease, opacity 0.2s ease;
   }
 
-  /* Summary line colour on open */
-  .faq-item[open] .faq-summary span:first-child {
-    color: hsl(var(--foreground));
+  /* ── Vertical bar subtle scale on open ── */
+  .faq-item[open] svg line:first-child {
+    transform-origin: center;
+    animation: vbar-in 0.28s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
   }
-  .faq-item[open] .faq-icon {
-    border-color: hsl(var(--primary) / 0.6);
-    background-color: hsl(var(--primary) / 0.08);
+  @keyframes vbar-in {
+    0%   { transform: scaleY(0.6); }
+    100% { transform: scaleY(1); }
   }
+
+  /* ── Max-height accordion ── */
+  .faq-body {
+    transition: max-height 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* ── Inner content: fade + slide up on reveal ── */
+  .faq-inner {
+    opacity: 0;
+    transform: translateY(7px);
+    transition: opacity 0.28s ease 0.06s, transform 0.32s ease 0.06s;
+  }
+  .faq-item[open] .faq-inner {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── Bullets: staggered slide-up ── */
+  .faq-bullet {
+    opacity: 0;
+    transform: translateY(5px);
+    transition: opacity 0.24s ease, transform 0.28s ease;
+    transition-delay: calc(0.1s + var(--bi, 0) * 0.08s);
+  }
+  .faq-item[open] .faq-bullet {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── Left border accent: grows on open ── */
+  .faq-item {
+    position: relative;
+    transition: background-color 0.2s ease;
+  }
+  .faq-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: hsl(var(--primary));
+    transform: scaleY(0);
+    transform-origin: top center;
+    transition: transform 0.36s cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: 0 0 1px 1px;
+  }
+  .faq-item[open]::before { transform: scaleY(1); }
 </style>
 
 <script is:inline>
   (function () {
     function initFaq() {
-      const items = document.querySelectorAll('.faq-item');
+      var items = document.querySelectorAll('.faq-item');
+
       items.forEach(function (details) {
-        const summary = details.querySelector('.faq-summary');
-        const body = details.querySelector('.faq-body');
+        var summary = details.querySelector('.faq-summary');
+        var body    = details.querySelector('.faq-body');
         if (!summary || !body) return;
 
         summary.addEventListener('click', function (e) {
           e.preventDefault();
 
           if (details.open) {
-            // Close: animate to 0
+            /* ── Close ── */
             body.style.maxHeight = body.scrollHeight + 'px';
             requestAnimationFrame(function () {
               body.style.maxHeight = '0';
-              body.addEventListener('transitionend', function handler() {
+              body.addEventListener('transitionend', function h() {
                 details.removeAttribute('open');
-                body.removeEventListener('transitionend', handler);
+                body.removeEventListener('transitionend', h);
               });
             });
+
           } else {
-            // Open: animate to full height
-            // Close any other open item first
+            /* ── Close any other open item ── */
             items.forEach(function (other) {
               if (other !== details && other.open) {
-                const otherBody = other.querySelector('.faq-body');
-                if (otherBody) {
-                  otherBody.style.maxHeight = otherBody.scrollHeight + 'px';
+                var ob = other.querySelector('.faq-body');
+                if (ob) {
+                  ob.style.maxHeight = ob.scrollHeight + 'px';
                   requestAnimationFrame(function () {
-                    otherBody.style.maxHeight = '0';
-                    otherBody.addEventListener('transitionend', function h() {
+                    ob.style.maxHeight = '0';
+                    ob.addEventListener('transitionend', function h() {
                       other.removeAttribute('open');
-                      otherBody.removeEventListener('transitionend', h);
+                      ob.removeEventListener('transitionend', h);
                     });
                   });
                 }
               }
             });
 
+            /* ── Open ── */
             details.setAttribute('open', '');
             body.style.maxHeight = '0';
             requestAnimationFrame(function () {
               body.style.maxHeight = body.scrollHeight + 'px';
-              body.addEventListener('transitionend', function handler() {
+              body.addEventListener('transitionend', function h() {
                 body.style.maxHeight = 'none';
-                body.removeEventListener('transitionend', handler);
+                body.removeEventListener('transitionend', h);
               });
             });
           }
