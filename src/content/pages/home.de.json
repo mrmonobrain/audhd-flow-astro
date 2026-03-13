@@ -165,6 +165,10 @@
           {
             "title": "Alle anderen Modi (Basis, Ruhe, Abend, Safe Space)",
             "body": "Absolut statische, unveränderliche Frequenzen geben dem autistischen Anteil des Nervensystems die maximale Vorhersagbarkeit und Sicherheit. Safe Space is an Anchor."
+          },
+          {
+            "title": "Safe Space – der Notfall-Modus",
+            "body": "Bei drohendem Overload kombiniert der Safe Space Brown Noise mit einem präzisen 58-BPM-Herzschlag. Dieser biologische Rhythmus aktiviert den Vagusnerv und bremst das Nervensystem physiologisch – bevor ein Meltdown eskaliert."
           }
         ]
       },
@@ -175,32 +179,51 @@
       },
       {
         "q": "Wie lange muss oder darf ich die App täglich nutzen und ab wann spüre ich eine Wirkung?",
-        "a": "Da AuDHD-Flow physikalisch und nicht chemisch wirkt, gibt es keine Überdosis und keine starre Mindestnutzungsdauer. Der Einstieg ist niederschwellig:",
+        "a": "Da AuDHD-Flow physikalisch und nicht chemisch wirkt, gibt es keine Überdosis und keine starre Mindestnutzungsdauer. Die Wirkung entfaltet sich auf zwei Ebenen:",
         "bullets": [
           {
-            "title": "Akute Entlastung (ab 15–20 Minuten)",
-            "body": "Du spürst den ersten Effekt fast sofort. Sobald die App läuft, wird dein neurologischer Reizfilter physikalisch abgeschirmt. Ideal für kurze Fokus-Sprints oder zum Herunterfahren nach einem Meeting."
+            "title": "Sofortige Entlastung (solange die App läuft)",
+            "body": "Ab dem ersten Einschalten maskieren die Frequenzen Umgebungsreize und entlasten deinen neurologischen Reizfilter physikalisch. Der Effekt ist direkt spürbar – endet aber, sobald du die App ausschaltest. Ideal für Fokus-Sprints, laute Umgebungen oder zum Herunterfahren nach einem Meeting."
           },
           {
-            "title": "Kumulativer Schutz (mehrere Stunden)",
-            "body": "AuDHD-Flow kann problemlos auch mehrere Stunden am Stück laufen – anders als klassische Meditations-Apps. Viele Nutzer setzen sie als permanente akustische Begleitung im Hintergrund ein, zum Beispiel im Grossraumbüro."
+            "title": "Kumulativer Langzeiteffekt (über die Nutzung hinaus)",
+            "body": "Mit regelmässiger Nutzung beginnt dein Nervensystem, die Frequenzen fest mit bestimmten Zuständen zu verknüpfen – eine Art neurologische Konditionierung. Klinische Studien zeigen, dass tägliches Hören spezifischer Frequenzen nach Wochen messbare, neuroplastische Veränderungen bewirkt. Der Effekt trägt dann zunehmend auch über die aktive Nutzung hinaus."
           }
         ],
-        "a2": "Der langfristige Effekt baut sich in drei Phasen auf:",
+        "a2": "Der Aufbauprozess verläuft dabei typischerweise in drei Phasen:",
         "bullets2": [
           {
-            "title": "Sofort (Tag 1 – Woche 2) – Akustische Abschirmung",
+            "title": "Woche 1–2 – Akustische Abschirmung",
             "body": "Du merkst, dass du seltener aus dem Konzept gebracht wirst. Die unbewusste Scan-Aktivität deines Gehirns wird gedämpft."
           },
           {
-            "title": "Mittelfristig (Woche 2 – Monat 3) – Neurologische Konditionierung",
+            "title": "Woche 2 – Monat 3 – Neurologische Konditionierung",
             "body": "Dein Nervensystem verknüpft die Frequenzen fest mit Zuständen. Das «Mount-Everest-Syndrom» – bei dem kleine Aufgaben unüberwindbar wirken – nimmt ab."
           },
           {
-            "title": "Langfristig (ab Monat 3) – Systemische Energieeinsparung",
-            "body": "Weil du tagsüber konsequent auf Bottom-Up-Regulation gesetzt hast, hast du abends deutlich mehr Kapazität übrig – für dich und dein Privatleben."
+            "title": "Ab Monat 3 – Systemische Energieeinsparung",
+            "body": "Weil du konsequent auf Bottom-Up-Regulation gesetzt hast, hast du abends deutlich mehr Kapazität übrig – für dich und dein Privatleben."
           }
         ]
+      },
+      {
+        "q": "Ist AuDHD-Flow auch bei isolierter ADHS- oder ASS-Diagnose sinnvoll?",
+        "a": "Die App wurde gezielt für das AuDHD-Profil entwickelt – also Menschen, bei denen ADHS und Autismus gemeinsam auftreten. Das AuDHD-Paradoxon: ADHS braucht Stimulation, Autismus braucht Vorhersagbarkeit. Doch auch bei Einzeldiagnosen können die Mechanismen helfen:",
+        "bullets": [
+          {
+            "title": "Bei ADHS",
+            "body": "Die frequenzbasierte Maskierung (Stochastische Resonanz) hebt die Reizschwelle an und verbessert die Signalverarbeitung bei niedriger dopaminerger Aktivität. Mehrere Meta-Analysen bestätigen diesen Effekt."
+          },
+          {
+            "title": "Bei ASS",
+            "body": "Die statischen Frequenzen und das Brown Noise schaffen eine vorhersagbare akustische Umgebung. Das reduziert die sensorische Verarbeitungslast und gibt dem Nervensystem die Stabilität, die es zur Selbstregulation braucht."
+          }
+        ]
+      },
+      {
+        "q": "Wer steckt hinter AuDHD-Flow?",
+        "a": "AuDHD-Flow entstand aus persönlicher Notwendigkeit. Der Gründer – selbst mit AuDHD-Diagnose – suchte als Agenturleiter im Berufsalltag nach einer physikalischen Alternative zu weiteren Medikamenten. Auf Basis klinischer Studien zur neuroakustischen Wirkung programmierte er einen Prototyp. Die Wirkung im lauten Agenturalltag war sofort spürbar: ein externer akustischer Filter, der den Lärm im Kopf ordnet. Daraus entstand die Vision, auch anderen Menschen mit der komplexen Realität von AuDHD eine verlässliche, nicht-medikamentöse Unterstützung zu bieten. Die Audio-Engine basiert auf publizierten, peer-reviewed Studien – darunter Meta-Analysen mit über 300 Probanden.",
+        "bullets": null
       }
     ]
   }

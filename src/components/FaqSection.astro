@@ -69,7 +69,7 @@ const { data, lang = 'de' } = Astro.props;
               {item.bullets && item.bullets.length > 0 && (
                 <ul class="mt-5 flex flex-col gap-4">
                   {item.bullets.map((bullet, bi) => (
-                    <li class="faq-bullet flex gap-4 items-start" style={`--bi: ${bi}`}>
+                    <li class="faq-bullet flex gap-5 items-start" style={`--bi: ${bi}`}>
                       <span class="flex-shrink-0 mt-[0.4em] w-[2px] h-[1rem] rounded-full bg-primary opacity-60"></span>
                       <div>
                         <p class="text-[0.9375rem] font-semibold text-foreground leading-snug mb-1">
@@ -93,7 +93,7 @@ const { data, lang = 'de' } = Astro.props;
               {item.bullets2 && item.bullets2.length > 0 && (
                 <ul class="mt-4 flex flex-col gap-4">
                   {item.bullets2.map((bullet, bi) => (
-                    <li class="faq-bullet flex gap-4 items-start" style={`--bi: ${bi + 3}`}>
+                    <li class="faq-bullet flex gap-5 items-start" style={`--bi: ${bi + 3}`}>
                       <span class="flex-shrink-0 mt-[0.4em] w-[2px] h-[1rem] rounded-full bg-primary opacity-40"></span>
                       <div>
                         <p class="text-[0.9375rem] font-semibold text-foreground leading-snug mb-1">
