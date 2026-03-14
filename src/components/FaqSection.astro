@@ -127,7 +127,7 @@ const { data, lang = 'de' } = Astro.props;
     "name": item.q,
     "acceptedAnswer": {
       "@type": "Answer",
-      "text": item.a + (item.bullets ? ' ' + item.bullets.map(b => b.title + ': ' + b.body).join(' ') : '')
+      "text": item.a + (item.bullets ? ' ' + item.bullets.map(b => b.title + ': ' + b.body).join(' ') : '') + (item.a2 ? ' ' + item.a2 : '') + (item.bullets2 ? ' ' + item.bullets2.map(b => b.title + ': ' + b.body).join(' ') : '')
     }
   }))
 })} />
@@ -240,61 +240,67 @@ const { data, lang = 'de' } = Astro.props;
   (function () {
     function initFaq() {
       var items = document.querySelectorAll('.faq-item');
+      var isAnimating = false;
+
+      function closeItem(det, cb) {
+        var b = det.querySelector('.faq-body');
+        if (!b || !det.open) { if (cb) cb(); return; }
+        b.style.maxHeight = b.scrollHeight + 'px';
+        requestAnimationFrame(function () {
+          b.style.maxHeight = '0';
+          b.addEventListener('transitionend', function h(ev) {
+            if (ev.target !== b) return;
+            det.removeAttribute('open');
+            b.removeEventListener('transitionend', h);
+            if (cb) cb();
+          });
+        });
+      }
+
+      function openItem(det) {
+        var b = det.querySelector('.faq-body');
+        if (!b) { isAnimating = false; return; }
+        det.setAttribute('open', '');
+        b.style.maxHeight = '0';
+        requestAnimationFrame(function () {
+          b.style.maxHeight = b.scrollHeight + 'px';
+          b.addEventListener('transitionend', function h(ev) {
+            if (ev.target !== b) return;
+            b.style.maxHeight = 'none';
+            b.removeEventListener('transitionend', h);
+            isAnimating = false;
+
+            /* Scroll in den sichtbaren Bereich */
+            var nav = document.querySelector('nav');
+            var headerH = nav ? nav.offsetHeight + 8 : 80;
+            var rect = det.getBoundingClientRect();
+            if (rect.top < headerH || rect.bottom > window.innerHeight) {
+              det.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+          });
+        });
+      }
 
       items.forEach(function (details) {
         var summary = details.querySelector('.faq-summary');
-        var body    = details.querySelector('.faq-body');
-        if (!summary || !body) return;
+        if (!summary) return;
 
         summary.addEventListener('click', function (e) {
           e.preventDefault();
+          if (isAnimating) return;
+          isAnimating = true;
 
           if (details.open) {
-            /* ── Close ── */
-            body.style.maxHeight = body.scrollHeight + 'px';
-            requestAnimationFrame(function () {
-              body.style.maxHeight = '0';
-              body.addEventListener('transitionend', function h() {
-                details.removeAttribute('open');
-                body.removeEventListener('transitionend', h);
-              });
-            });
-
+            closeItem(details, function () { isAnimating = false; });
           } else {
-            /* ── Close any other open item ── */
-            items.forEach(function (other) {
-              if (other !== details && other.open) {
-                var ob = other.querySelector('.faq-body');
-                if (ob) {
-                  ob.style.maxHeight = ob.scrollHeight + 'px';
-                  requestAnimationFrame(function () {
-                    ob.style.maxHeight = '0';
-                    ob.addEventListener('transitionend', function h() {
-                      other.removeAttribute('open');
-                      ob.removeEventListener('transitionend', h);
-                    });
-                  });
-                }
-              }
-            });
-
-            /* ── Open ── */
-            details.setAttribute('open', '');
-            body.style.maxHeight = '0';
-            requestAnimationFrame(function () {
-              body.style.maxHeight = body.scrollHeight + 'px';
-              body.addEventListener('transitionend', function h() {
-                body.style.maxHeight = 'none';
-                body.removeEventListener('transitionend', h);
-
-                /* Scroll gesamte Antwort in den sichtbaren Bereich */
-                var rect = details.getBoundingClientRect();
-                var headerH = 80; /* Navbar-Höhe */
-                if (rect.top < headerH || rect.bottom > window.innerHeight) {
-                  details.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                }
-              });
-            });
+            /* Schliesse offenes Item, dann öffne neues */
+            var openEl = null;
+            items.forEach(function (o) { if (o !== details && o.open) openEl = o; });
+            if (openEl) {
+              closeItem(openEl, function () { openItem(details); });
+            } else {
+              openItem(details);
+            }
           }
         });
       });

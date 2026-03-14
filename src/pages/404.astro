@@ -10,7 +10,9 @@ import '../styles/global.css';
     <title>404 – AuDHD-Flow</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" is:inline />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" /></noscript>
     <link rel="icon" href="/favicon.ico" />
     <script is:inline>
       (function() {
@@ -19,22 +21,44 @@ import '../styles/global.css';
         if (saved === 'dark' || (!saved && prefersDark)) {
           document.documentElement.classList.add('dark');
         }
+        /* i18n: set lang attribute based on browser language */
+        var lang = (navigator.language || '').slice(0, 2);
+        if (lang === 'en') {
+          document.documentElement.lang = 'en';
+        }
       })();
     </script>
   </head>
   <body class="bg-background text-foreground min-h-svh flex flex-col items-center justify-center px-8 text-center">
     <span class="font-mono text-[0.6875rem] tracking-[0.2em] uppercase text-primary block mb-6">404</span>
     <h1 class="font-display text-[clamp(2rem,5vw,3.5rem)] font-bold tracking-tight text-foreground mb-4">
-      Seite nicht gefunden
+      <span class="msg-de">Seite nicht gefunden</span>
+      <span class="msg-en hidden">Page not found</span>
     </h1>
     <p class="text-text2 font-light mb-10 max-w-md">
-      Diese Seite existiert nicht oder wurde verschoben.
+      <span class="msg-de">Diese Seite existiert nicht oder wurde verschoben.</span>
+      <span class="msg-en hidden">This page doesn't exist or has been moved.</span>
     </p>
     <a
       href="/de/"
+      id="home-link"
       class="inline-flex items-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-md font-mono text-[0.8125rem] tracking-[0.1em] uppercase no-underline transition-all hover:-translate-y-0.5"
     >
-      Zur Startseite
+      <span class="msg-de">Zur Startseite</span>
+      <span class="msg-en hidden">Go to homepage</span>
     </a>
+    <script is:inline>
+      (function() {
+        var lang = (navigator.language || '').slice(0, 2);
+        if (lang === 'en') {
+          var deEls = document.querySelectorAll('.msg-de');
+          var enEls = document.querySelectorAll('.msg-en');
+          for (var i = 0; i < deEls.length; i++) deEls[i].classList.add('hidden');
+          for (var i = 0; i < enEls.length; i++) enEls[i].classList.remove('hidden');
+          var link = document.getElementById('home-link');
+          if (link) link.href = '/en/';
+        }
+      })();
+    </script>
   </body>
 </html>
