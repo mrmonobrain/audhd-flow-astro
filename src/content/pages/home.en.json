@@ -17,7 +17,7 @@
     "stats": [
       { "number": "3–5 %", "text": "of the population have a combined AuDHD profile. Almost no solution addresses both sides." },
       { "number": "×4", "text": "higher sensory processing load compared to neurotypical individuals." },
-      { "number": "0", "text": "apps on the market addressing ADHD stimulation and autism predictability simultaneously." }
+      { "number": "0", "text": "neuroacoustic apps on the market combining ADHD stimulation and autism predictability in one architecture." }
     ]
   },
   "modes": {
@@ -27,7 +27,7 @@
       {
         "color": "grey", "dotColor": "#888",
         "badge": "Shield",
-        "name": "BASIS",
+        "name": "BASE",
         "hz": "Frequency-based masking",
         "desc": "Noise with the mathematical structure of natural sounds. Masks ambient noise so your brain can stop scanning the environment. Your acoustic immune system.",
         "wide": false
@@ -35,7 +35,7 @@
       {
         "color": "blue", "dotColor": "#5B9BD5",
         "badge": "Drive",
-        "name": "FOKUS",
+        "name": "FOCUS",
         "hz": "Activating frequency pattern",
         "desc": "Binaural stimulation in the attention range. Like glasses for the frontal lobe – for admin, emails, and complex tasks.",
         "wide": false
@@ -43,7 +43,7 @@
       {
         "color": "teal", "dotColor": "hsl(184, 100%, 27%)",
         "badge": "Balance",
-        "name": "RUHE",
+        "name": "CALM",
         "hz": "Calming frequency pattern",
         "desc": "Your brain synchronises to a calmer rhythm. Between focus and rest – ideal for creative work.",
         "wide": false
@@ -59,7 +59,7 @@
       {
         "color": "brown", "dotColor": "#8B6A50",
         "badge": "Transition",
-        "name": "ABEND",
+        "name": "EVENING",
         "hz": "Sleep transition",
         "desc": "Gentle frequency stimulation for the transition to sleep. The nervous system is carefully powered down.",
         "wide": false
